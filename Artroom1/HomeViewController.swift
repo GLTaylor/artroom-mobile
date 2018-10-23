@@ -81,10 +81,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         let controller: ArtViewController
         controller = storyboard?.instantiateViewController(withIdentifier: "ArtViewController") as! ArtViewController
 
-        let art = choosingAttributes()
-        controller.chosenArt = art
-//        controller.chosenMood = art.mood
-//        controller.chosenInterest = art.interest
+        controller.chosenArtAttributes = choosingAttributes()
         present(controller, animated: true, completion: nil)
     }
     

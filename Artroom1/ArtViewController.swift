@@ -12,8 +12,6 @@ import UIKit
 class ArtViewController: UIViewController {
     
     var chosenArtAttributes: HomeViewController.ArtAttributes!
-//    var chosenMood: HomeViewController.Mood!
-//    var chosenInterest: HomeViewController.Interest!
 
     @IBOutlet weak var artResults: UILabel!
     @IBOutlet weak var artImage: UIImageView!
