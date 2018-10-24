@@ -19,20 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Artroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-To-mKY">
-                                <rect key="frame" x="33.666666666666657" y="170" width="347" height="47"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <rect key="frame" x="14.666666666666657" y="170" width="385.33333333333337" height="37"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick your mood and hobby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bW-Uo-qQH">
-                                <rect key="frame" x="105.33333333333331" y="279" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bti-Mt-Ffy">
-                                <rect key="frame" x="47" y="354" width="320" height="216"/>
+                                <rect key="frame" x="47.333333333333343" y="340" width="320" height="216"/>
+                                <color key="tintColor" red="0.38657195449999998" green="0.61267406089999998" blue="0.042049477609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="biD-Kj-lbK"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zdc-a6-XcR"/>
@@ -40,13 +35,18 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt5-R8-Pom">
                                 <rect key="frame" x="177" y="633" width="60" height="30"/>
-                                <color key="backgroundColor" red="0.17300216970000001" green="0.17855595890000001" blue="0.55573996110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Discover"/>
                                 <connections>
                                     <action selector="seeArt" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Z1-i5-1qV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick your mood and interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bW-Uo-qQH">
+                                <rect key="frame" x="90" y="291" width="235" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -54,12 +54,12 @@
                             <constraint firstItem="bti-Mt-Ffy" firstAttribute="top" secondItem="5bW-Uo-qQH" secondAttribute="bottom" constant="50" id="2jw-ft-GL7"/>
                             <constraint firstItem="XY2-To-mKY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="2qv-Zt-ICJ"/>
                             <constraint firstItem="gt5-R8-Pom" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4mg-CQ-iQo"/>
-                            <constraint firstItem="5bW-Uo-qQH" firstAttribute="top" secondItem="XY2-To-mKY" secondAttribute="bottom" constant="62" id="Frs-wG-y0y"/>
+                            <constraint firstItem="5bW-Uo-qQH" firstAttribute="top" secondItem="XY2-To-mKY" secondAttribute="bottom" constant="84" id="Frs-wG-y0y"/>
                             <constraint firstItem="bti-Mt-Ffy" firstAttribute="top" secondItem="5bW-Uo-qQH" secondAttribute="bottom" constant="174" id="K8J-cA-Hqw"/>
                             <constraint firstItem="XY2-To-mKY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Prv-lL-G9o"/>
                             <constraint firstItem="5bW-Uo-qQH" firstAttribute="centerX" secondItem="XY2-To-mKY" secondAttribute="centerX" id="PuQ-r1-jA8"/>
                             <constraint firstItem="XY2-To-mKY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="UlV-vX-n8V"/>
-                            <constraint firstItem="bti-Mt-Ffy" firstAttribute="top" secondItem="5bW-Uo-qQH" secondAttribute="bottom" constant="54" id="XPO-Xh-R5Z"/>
+                            <constraint firstItem="bti-Mt-Ffy" firstAttribute="top" secondItem="5bW-Uo-qQH" secondAttribute="bottom" constant="32" id="XPO-Xh-R5Z"/>
                             <constraint firstItem="bti-Mt-Ffy" firstAttribute="top" secondItem="5bW-Uo-qQH" secondAttribute="bottom" constant="174" id="b3a-NF-EEB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gt5-R8-Pom" secondAttribute="bottom" constant="73" id="gdJ-DY-efd"/>
                         </constraints>
@@ -101,8 +101,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcz-8P-oyX">
                                 <rect key="frame" x="149" y="623" width="116" height="30"/>
-                                <color key="backgroundColor" red="0.17300216970000001" green="0.17855595890000001" blue="0.55573996110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Back to the Start"/>
                                 <connections>
                                     <action selector="playAgain" destination="eoJ-1l-058" eventType="touchUpInside" id="ZtU-eV-laB"/>

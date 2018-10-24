@@ -65,7 +65,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     }
     
     func assignbackground(){
-        let background = UIImage(named: "background")
+        let background = UIImage(named: "polke_faded")
         
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
