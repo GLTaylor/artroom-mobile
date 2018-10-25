@@ -8,23 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+
     
-    enum Mood: Int {
-        case happy
-        case sad
-    }
-    
-    enum Interest: Int {
-        case cities
-        case nature
-    }
-    
-    struct ArtAttributes: Equatable {
-        var mood: Mood
-        var interest: Interest
-    }
-    
+   class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var chooseSelf: UIPickerView!
     
@@ -50,18 +36,9 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
     }
     
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        let mood =  [pickerView.selectedRow(inComponent: 0)]
-//        let interest = [pickerView.selectedRow(inComponent: 1)]
-//        chosenThings =   "\(mood) & \(interest)"
-//    }
-
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackground()
-        // Do any additional setup after loading the view.
     }
     
     func assignbackground(){

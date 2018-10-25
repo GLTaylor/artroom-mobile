@@ -13,6 +13,10 @@
 		1286EC7E21775F9100CBB491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1286EC7D21775F9100CBB491 /* Assets.xcassets */; };
 		1286EC8121775F9100CBB491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1286EC7F21775F9100CBB491 /* LaunchScreen.storyboard */; };
 		1286ECB22178F34D00CBB491 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECB12178F34D00CBB491 /* ArtViewController.swift */; };
+		1286ECD22182122100CBB491 /* ArtAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD12182122100CBB491 /* ArtAttributes.swift */; };
+		1286ECD4218212B700CBB491 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD3218212B700CBB491 /* Mood.swift */; };
+		1286ECD6218212F100CBB491 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD5218212F100CBB491 /* Interest.swift */; };
+		1286ECD821821CA200CBB491 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD721821CA200CBB491 /* Artwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		1286EC8021775F9100CBB491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1286EC8221775F9100CBB491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1286ECB12178F34D00CBB491 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
+		1286ECD12182122100CBB491 /* ArtAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtAttributes.swift; sourceTree = "<group>"; };
+		1286ECD3218212B700CBB491 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		1286ECD5218212F100CBB491 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		1286ECD721821CA200CBB491 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				1286EC7621775F8E00CBB491 /* AppDelegate.swift */,
 				1286EC7821775F8E00CBB491 /* HomeViewController.swift */,
 				1286ECB12178F34D00CBB491 /* ArtViewController.swift */,
+				1286ECD721821CA200CBB491 /* Artwork.swift */,
+				1286ECD12182122100CBB491 /* ArtAttributes.swift */,
+				1286ECD3218212B700CBB491 /* Mood.swift */,
+				1286ECD5218212F100CBB491 /* Interest.swift */,
 				1286EC7A21775F8E00CBB491 /* Main.storyboard */,
 				1286EC7D21775F9100CBB491 /* Assets.xcassets */,
 				1286EC7F21775F9100CBB491 /* LaunchScreen.storyboard */,
@@ -138,7 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1286ECD4218212B700CBB491 /* Mood.swift in Sources */,
+				1286ECD22182122100CBB491 /* ArtAttributes.swift in Sources */,
+				1286ECD821821CA200CBB491 /* Artwork.swift in Sources */,
 				1286ECB22178F34D00CBB491 /* ArtViewController.swift in Sources */,
+				1286ECD6218212F100CBB491 /* Interest.swift in Sources */,
 				1286EC7921775F8E00CBB491 /* HomeViewController.swift in Sources */,
 				1286EC7721775F8E00CBB491 /* AppDelegate.swift in Sources */,
 			);

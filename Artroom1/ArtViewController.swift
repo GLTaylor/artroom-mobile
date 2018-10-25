@@ -9,37 +9,43 @@
 import Foundation
 import UIKit
 
+
 class ArtViewController: UIViewController {
     
-    var chosenArtAttributes: HomeViewController.ArtAttributes!
+    var chosenArtAttributes: ArtAttributes!
 
     @IBOutlet weak var artResults: UILabel!
     @IBOutlet weak var artImage: UIImageView!
 
    override func viewWillAppear(_ animated: Bool) {
+    
+    func assignTheLabels(_ artwork: Artwork) {
+        self.artResults.text = artwork.title
+        self.artImage.image = UIImage (named: artwork.image)
+    }
+    
+    
     switch chosenArtAttributes.mood {
     case .happy:
         switch chosenArtAttributes.interest {
         case .cities:
-            self.artResults.text = "Late Night - Erin Nicholls"
-            self.artImage.image = UIImage (named: "erin nicholls")
+            let artwork = Artwork(title: "Watching - Erin Nicholls", image: "erin nicholls")
+            assignTheLabels(artwork)
             
         case .nature:
-            self.artResults.text = "Fall Scene - John Smith"
-            self.artImage.image = UIImage (named: "nowhere")
-
+            let artwork = Artwork(title: "Fall Scene - John Smith", image: "nowhere")
+            assignTheLabels(artwork)
 
         }
     case .sad:
         switch chosenArtAttributes.interest {
         case .cities:
-            self.artResults.text = "Reflections - Erin Nicholls"
-            self.artImage.image = UIImage (named: "Reflections_nicholls")
+            let artwork = Artwork(title: "Reflections - Erin Nicholls", image: "Reflections_nicholls")
+            assignTheLabels(artwork)
             
         case .nature:
-            self.artResults.text = "Norway Night - Sarah Hicks"
-            self.artImage.image = UIImage (named: "norway")
-
+            let artwork = Artwork(title: "Norway Night - Sarah Hicks", image: "norway")
+            assignTheLabels(artwork)
         }
         
      }
