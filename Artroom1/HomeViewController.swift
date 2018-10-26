@@ -22,7 +22,7 @@ import UIKit
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 2
+        return 3
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -31,6 +31,8 @@ import UIKit
         case (1, 0): return "sad"
         case (0, 1): return "cities"
         case (1, 1): return "nature"
+        case (2, 0): return "meh"
+        case (2, 1): return "humanity"
             
         default: return "whoops"
         }

@@ -11,4 +11,5 @@ import Foundation
 enum Mood: Int {
     case happy
     case sad
+    case meh
 }

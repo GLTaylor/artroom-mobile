@@ -11,4 +11,5 @@ import Foundation
 enum Interest: Int {
     case cities
     case nature
+    case humanity
 }

@@ -36,6 +36,9 @@ class ArtViewController: UIViewController {
             let artwork = Artwork(title: "Fall Scene - John Smith", image: "nowhere")
             assignTheLabels(artwork)
 
+        case .humanity:
+            let artwork = Artwork(title: "Mikhail - Annie Leibovitz", image: "Mikhail - Annie Leibovitz")
+            assignTheLabels(artwork)
         }
     case .sad:
         switch chosenArtAttributes.interest {
@@ -46,7 +49,27 @@ class ArtViewController: UIViewController {
         case .nature:
             let artwork = Artwork(title: "Norway Night - Sarah Hicks", image: "norway")
             assignTheLabels(artwork)
+            
+        case .humanity:
+            let artything = Artwork(title: "Diagonal of May 25 - Dan Flavin", image: "Diagonal of May 25 - Dan Flavin")
+            assignTheLabels(artything)
         }
+        
+    case .meh:
+        switch chosenArtAttributes.interest {
+        case .cities:
+            let artwork = Artwork(title: "Melbourne - Erin Nicholls", image: "melbourne")
+            assignTheLabels(artwork)
+            
+        case .nature:
+            let artwork = Artwork(title: "Isle Saint-Michel - Elger Esser", image: "Isle Saint-Michel - Elger Esser")
+            assignTheLabels(artwork)
+            
+        case .humanity:
+            let artwork = Artwork(title: "Studies of Hands - Alexander Maw", image: "Studies of Hands - Alexander Maw")
+            assignTheLabels(artwork)
+        }
+        
         
      }
     }
