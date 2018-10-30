@@ -11,4 +11,5 @@ import Foundation
 struct Artwork: Equatable {
     var title: String
     var image: String
+    var attributes: ArtAttributes
 }

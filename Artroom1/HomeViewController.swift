@@ -45,15 +45,15 @@ import UIKit
     
     func assignbackground(){
         let background = UIImage(named: "polke_faded")
-        
+        // cound shuffle this later
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
         view.addSubview(imageView)
-        self.view.sendSubview(toBack: imageView)
+        self.view.sendSubviewToBack(imageView)
     }
     
     @IBAction func seeArt() {
