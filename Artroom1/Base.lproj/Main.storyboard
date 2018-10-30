@@ -99,15 +99,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcz-8P-oyX">
-                                <rect key="frame" x="149" y="623" width="116" height="30"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Back to the Start"/>
-                                <connections>
-                                    <action selector="playAgain" destination="eoJ-1l-058" eventType="touchUpInside" id="ZtU-eV-laB"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Rc-3I-unb">
                                 <rect key="frame" x="34" y="102" width="346" height="367"/>
                             </imageView>
@@ -123,20 +114,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOd-Pq-AQ0">
+                                <rect key="frame" x="175.66666666666666" y="582" width="63" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" Another ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="renderAgain" destination="eoJ-1l-058" eventType="touchUpInside" id="QSq-Qm-CfT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcz-8P-oyX">
+                                <rect key="frame" x="144" y="649" width="126" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" Back to the Start "/>
+                                <connections>
+                                    <action selector="playAgain" destination="eoJ-1l-058" eventType="touchUpInside" id="ZtU-eV-laB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fcz-8P-oyX" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="149" id="Gu6-eR-iQ6"/>
+                            <constraint firstItem="fcz-8P-oyX" firstAttribute="top" secondItem="zOd-Pq-AQ0" secondAttribute="bottom" constant="37" id="9xv-7Z-vr7"/>
+                            <constraint firstItem="fcz-8P-oyX" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="144" id="Gu6-eR-iQ6"/>
                             <constraint firstItem="YT0-Zk-IbP" firstAttribute="centerX" secondItem="9Rc-3I-unb" secondAttribute="centerX" id="HNN-xM-1og"/>
-                            <constraint firstItem="KYD-NC-ZPe" firstAttribute="trailing" secondItem="fcz-8P-oyX" secondAttribute="trailing" constant="149" id="Lvr-UD-TEW"/>
+                            <constraint firstItem="KYD-NC-ZPe" firstAttribute="trailing" secondItem="fcz-8P-oyX" secondAttribute="trailing" constant="144" id="Lvr-UD-TEW"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="centerX" secondItem="KYD-NC-ZPe" secondAttribute="centerX" id="Rvd-0W-ypW"/>
                             <constraint firstItem="KYD-NC-ZPe" firstAttribute="bottom" secondItem="9Rc-3I-unb" secondAttribute="bottom" constant="267" id="XbN-wZ-pvk"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="34" id="d5Z-of-RGo"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="top" secondItem="KYD-NC-ZPe" secondAttribute="top" constant="82" id="hqI-sz-raM"/>
+                            <constraint firstItem="zOd-Pq-AQ0" firstAttribute="centerX" secondItem="KYD-NC-ZPe" secondAttribute="centerX" id="jus-T0-glr"/>
                             <constraint firstItem="YT0-Zk-IbP" firstAttribute="top" secondItem="9Rc-3I-unb" secondAttribute="bottom" constant="47" id="lJe-xX-ay1"/>
                             <constraint firstItem="YT0-Zk-IbP" firstAttribute="centerX" secondItem="KYD-NC-ZPe" secondAttribute="centerX" id="mKB-Jm-H0x"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="34" id="o0z-5s-dFD"/>
-                            <constraint firstItem="KYD-NC-ZPe" firstAttribute="bottom" secondItem="fcz-8P-oyX" secondAttribute="bottom" constant="83" id="v9I-61-cgl"/>
+                            <constraint firstItem="KYD-NC-ZPe" firstAttribute="bottom" secondItem="fcz-8P-oyX" secondAttribute="bottom" constant="57" id="v9I-61-cgl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KYD-NC-ZPe"/>
                     </view>
