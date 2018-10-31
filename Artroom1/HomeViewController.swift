@@ -8,7 +8,6 @@
 
 import UIKit
 
-
     
    class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -45,7 +44,7 @@ import UIKit
     
     func assignbackground(){
         let background = UIImage(named: "polke_faded")
-        // cound shuffle this later
+        
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill

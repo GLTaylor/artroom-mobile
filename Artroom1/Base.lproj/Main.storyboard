@@ -114,14 +114,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOd-Pq-AQ0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOd-Pq-AQ0">
                                 <rect key="frame" x="175.66666666666666" y="582" width="63" height="30"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title=" Another ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="renderAgain" destination="eoJ-1l-058" eventType="touchUpInside" id="QSq-Qm-CfT"/>
+                                    <action selector="renderFresh" destination="eoJ-1l-058" eventType="touchUpInside" id="Wik-Nk-R91"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcz-8P-oyX">
@@ -153,6 +153,7 @@
                         <viewLayoutGuide key="safeArea" id="KYD-NC-ZPe"/>
                     </view>
                     <connections>
+                        <outlet property="anotherButton" destination="zOd-Pq-AQ0" id="xBB-SD-jyq"/>
                         <outlet property="artImage" destination="9Rc-3I-unb" id="WdO-p5-NWs"/>
                         <outlet property="artResults" destination="YT0-Zk-IbP" id="GEL-2Y-nTe"/>
                     </connections>
