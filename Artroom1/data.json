@@ -1,136 +1,132 @@
-[
-    {
-        "title":"Watching - Erin Nicholls",
-        "image":"erin nicholls",
-        "attributes":{
-            "mood":0,
-            "interest":0
+{
+    "artwork":[
+        {
+            "title":"Watching - Erin Nicholls",
+            "image":"erin nicholls",
+            "attributes":{
+                "mood":0,
+                "interest":0
+            }
+        },
+        {
+            "title":"Fall Scene - John Smith",
+            "image":"nowhere",
+            "attributes":{
+                "mood":0,
+                "interest":1
+            }
+        },
+        {
+            "title":"Mikhail - Annie Leibovitz",
+            "image":"Mikhail - Annie Leibovitz",
+            "attributes":{
+                "mood":0,
+                "interest":2
+            }
+        },
+        {
+            "title":"Reflections - Erin Nicholls",
+            "image":"Reflections_nicholls",
+            "attributes":{
+                "mood":1,
+                "interest":0
+            }
+        },
+        {
+            "title":"Norway Night - Sarah Hicks",
+            "image":"norway",
+            "attributes":{
+                "mood":1,
+                "interest":1
+            }
+        },
+        {
+            "title":"Diagonal of May 25 - Dan Flavin",
+            "image":"Diagonal of May 25 - Dan Flavin",
+            "attributes":{
+                "mood":1,
+                "interest":2
+            }
+        },
+        {
+            "title":"Melbourne - Erin Nicholls",
+            "image":"melbourne",
+            "attributes":{
+                "mood":2,
+                "interest":0
+            }
+        },
+        {
+            "title":"Isle Saint-Michel - Elger Esser",
+            "image":"Isle Saint-Michel - Elger Esser",
+            "attributes":{
+                "mood":2,
+                "interest":1
+            }
+        },
+        {
+            "title":"Studies of Hands - Alexander Maw",
+            "image":"Studies of Hands - Alexander Maw",
+            "attributes":{
+                "mood":2,
+                "interest":2
+            }
+        },
+        {
+            "title":"Poveglia - Elger Esser",
+            "image":"Poveglia - Elger Esser",
+            "attributes":{
+                "mood":2,
+                "interest":1
+            }
+        },
+        {
+            "title":"Drifting - Anthony Goicolea",
+            "image":"Drifting - Anthony Goicolea",
+            "attributes":{
+                "mood":2,
+                "interest":1
+            }
+        },
+        {
+            "title":"My parents with their grandson, Ross - Annie Leibovitz",
+            "image":"My parents with their grandson, Ross - Annie Leibovitz",
+            "attributes":{
+                "mood":0,
+                "interest":2
+            }
+        },
+        {
+            "title":"Class Picture - Anthony Goicolea",
+            "image":"Class Picture - Anthony Goicolea",
+            "attributes":{
+                "mood":0,
+                "interest":2
+            }
+        },
+        {
+            "title":"By Lantern Light - Erin Nicholls",
+            "image":"By Lantern Light - Erin Nicholls",
+            "attributes":{
+                "mood":0,
+                "interest":2
+            }
+        },
+        {
+            "title":"Lighting of the Sails - Jonathan Zawada",
+            "image":"Lighting of the Sails - Jonathan Zawada",
+            "attributes":{
+                "mood":0,
+                "interest":0
+            }
+        },
+        {
+            "title":"Piano Lesson - Maya Brodsky",
+            "image":"Piano Lesson - Maya Brodsky",
+            "attributes":{
+                "mood":1,
+                "interest":2
+            }
         }
-    },
-    {
-        "title":"Fall Scene - John Smith",
-        "image":"nowhere",
-        "attributes":{
-            "mood":0,
-            "interest":1
-        }
-    },
-    {
-        "title":"Mikhail - Annie Leibovitz",
-        "image":"Mikhail - Annie Leibovitz",
-        "attributes":{
-            "mood":0,
-            "interest":2
-        }
-    },
-    {
-        "title":"Reflections - Erin Nicholls",
-        "image":"Reflections_nicholls",
-        "attributes":{
-            "mood":1,
-            "interest":0
-        }
-    },
-    {
-        "title":"Norway Night - Sarah Hicks",
-        "image":"norway",
-        "attributes":{
-            "mood":1,
-            "interest":1
-        }
-    },
-    {
-        "title":"Diagonal of May 25 - Dan Flavin",
-        "image":"Diagonal of May 25 - Dan Flavin",
-        "attributes":{
-            "mood":1,
-            "interest":2
-        }
-    },
-    {
-        "title":"Melbourne - Erin Nicholls",
-        "image":"melbourne",
-        "attributes":{
-            "mood":2,
-            "interest":0
-        }
-    },
-    {
-        "title":"Isle Saint-Michel - Elger Esser",
-        "image":"Isle Saint-Michel - Elger Esser",
-        "attributes":{
-            "mood":2,
-            "interest":1
-        }
-    },
-    {
-        "title":"Studies of Hands - Alexander Maw",
-        "image":"Studies of Hands - Alexander Maw",
-        "attributes":{
-            "mood":2,
-            "interest":2
-        }
-    },
-    {
-        "title":"Poveglia - Elger Esser",
-        "image":"Poveglia - Elger Esser",
-        "attributes":{
-            "mood":2,
-            "interest":1
-        }
-    },
-    {
-        "title":"Drifting - Anthony Goicolea",
-        "image":"Drifting - Anthony Goicolea",
-        "attributes":{
-            "mood":2,
-            "interest":1
-        }
-    },
-    {
-        "title":"My parents with their grandson, Ross - Annie Leibovitz",
-        "image":"My parents with their grandson, Ross - Annie Leibovitz",
-        "attributes":{
-            "mood":0,
-            "interest":2
-        }
-    },
-    {
-        "title":"Class Picture - Anthony Goicolea",
-        "image":"Class Picture - Anthony Goicolea",
-        "attributes":{
-            "mood":0,
-            "interest":2
-        }
-    },
-    {
-        "title":"By Lantern Light - Erin Nicholls",
-        "image":"By Lantern Light - Erin Nicholls",
-        "attributes":{
-            "mood":0,
-            "interest":2
-        }
-    }
-    {
-        "title":"Lighting of the Sails - Jonathan Zawada",
-        "image":"Lighting of the Sails - Jonathan Zawada",
-        "attributes":{
-            "mood":0,
-            "interest":0
-        }
-    }
-    {
-        "title":"Piano Lesson - Maya Brodsky",
-        "image":"Piano Lesson - Maya Brodsky",
-        "attributes": {
-            "mood":1,
-            "interest":2
-        }
-    }
-        
-]
-
-
-
-
+    ]
 }
