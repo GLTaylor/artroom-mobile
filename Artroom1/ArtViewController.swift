@@ -38,10 +38,8 @@ class ArtViewController: UIViewController {
         if selection.isEmpty {
             self.artResults.text = "No more art matches"
             self.artImage.image = UIImage (named: "Empty Frame")
-            // no art "Art" piece
             anotherButton.isEnabled = false
             anotherButton.alpha = 0.5
-//            anotherButton.setTitle("No more art", for: .disabled )
 
         } else {
             renderNextArt()
