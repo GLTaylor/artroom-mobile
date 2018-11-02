@@ -13,6 +13,7 @@ import UIKit
 class ArtViewController: UIViewController {
     
     var chosenArtAttributes: ArtAttributes!
+
     private var selection: [Artwork] = []
 
     @IBOutlet weak var artResults: UILabel!
