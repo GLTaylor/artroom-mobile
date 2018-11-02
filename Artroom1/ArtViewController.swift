@@ -13,20 +13,19 @@ import UIKit
 class ArtViewController: UIViewController {
     
     var chosenArtAttributes: ArtAttributes!
-    var randomIndex = Int()
-    var selection: [Artwork] = []
+    private var selection: [Artwork] = []
 
     @IBOutlet weak var artResults: UILabel!
     @IBOutlet weak var artImage: UIImageView!
     @IBOutlet weak var anotherButton: UIButton!
    
-    func assignTheLabels(_ artwork: Artwork) {
+    func setCurrentArtwork(_ artwork: Artwork) {
         self.artResults.text = artwork.title
         self.artImage.image = UIImage (named: artwork.image)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-    
+        super.viewWillAppear(animated)
         selection = arrayOfArtworks.filter { (artwork: Artwork) -> Bool in
             artwork.attributes == chosenArtAttributes
         }
@@ -56,7 +55,7 @@ class ArtViewController: UIViewController {
 
     private func renderNextArt() {
         if let rendered = selection.randomElement(), let index = selection.firstIndex(of: rendered)  {
-            assignTheLabels(rendered)
+            setCurrentArtwork(rendered)
             selection.remove(at: index)
         }
     }
