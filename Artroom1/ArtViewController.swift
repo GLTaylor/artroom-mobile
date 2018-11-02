@@ -14,7 +14,7 @@ class ArtViewController: UIViewController {
     
     var chosenArtAttributes: ArtAttributes!
     var randomIndex = Int()
-    var selection: [Artwork] = []
+    private var selection: [Artwork] = []
 
     @IBOutlet weak var artResults: UILabel!
     @IBOutlet weak var artImage: UIImageView!
