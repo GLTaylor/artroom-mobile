@@ -19,7 +19,6 @@ class ArtViewController: UIViewController {
     @IBOutlet weak var artResults: UILabel!
     @IBOutlet weak var artImage: UIImageView!
     @IBOutlet weak var anotherButton: UIButton!
-
    
     func assignTheLabels(_ artwork: Artwork) {
         self.artResults.text = artwork.title
@@ -38,10 +37,12 @@ class ArtViewController: UIViewController {
     @IBAction func renderFresh() {
         
         if selection.isEmpty {
+            self.artResults.text = "No more art matches"
+            self.artImage.image = UIImage (named: "Empty Frame")
             // no art "Art" piece
             anotherButton.isEnabled = false
             anotherButton.alpha = 0.5
-            anotherButton.setTitle("No more art", for: .disabled )
+//            anotherButton.setTitle("No more art", for: .disabled )
 
         } else {
             renderNextArt()

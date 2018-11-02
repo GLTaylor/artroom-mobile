@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum Interest: Int {
-    case cities
+enum Interest: Int, Codable {
+    case tech
     case nature
     case humanity
 }

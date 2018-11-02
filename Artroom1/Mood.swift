@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum Mood: Int {
-    case happy
-    case sad
+enum Mood: Int, Codable {
+    case joyful
+    case melancholy
     case meh
 }
