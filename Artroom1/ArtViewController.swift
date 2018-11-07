@@ -18,7 +18,7 @@ class ArtViewController: UIViewController {
 
     @IBOutlet weak var artResults: UILabel!
     @IBOutlet weak var artImage: UIImageView!
-    @IBOutlet weak var anotherButton: UIButton!
+//    @IBOutlet weak var anotherButton: UIButton!
    
     func setCurrentArtwork(_ artwork: Artwork) {
         self.artResults.text = artwork.title
@@ -34,19 +34,49 @@ class ArtViewController: UIViewController {
        
      }
     
-    @IBAction func renderFresh() {
+     func renderFresh() {
         
         if selection.isEmpty {
             self.artResults.text = "No more art matches"
             self.artImage.image = UIImage (named: "Empty Frame")
-            anotherButton.isEnabled = false
-            anotherButton.alpha = 0.5
+//            anotherButton.isEnabled = false
+//            anotherButton.alpha = 0.5
 
         } else {
             renderNextArt()
         }
        
     }
+    
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: self.view)
+        var thisIsATestArtArray: [Artwork] = []
+        if let view = recognizer.view {
+            view.center = CGPoint(x:view.center.x + translation.x,
+                                  y:view.center.y + translation.y)
+        }
+        recognizer.setTranslation(CGPoint.zero, in: self.view)
+        
+        
+        if recognizer.state == UIGestureRecognizer.State.ended {
+            
+            let velocity = recognizer.velocity(in: self.view)
+            if(velocity.x > 0) {
+                renderFresh()
+                NSLog("gesture went right and sample array hypothetically grows");
+            }
+            else {
+                renderFresh()
+                NSLog("gesture went left");
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     @IBAction func playAgain() {
         self.dismiss(animated: true, completion: nil)
