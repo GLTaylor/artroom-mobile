@@ -32,27 +32,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-      
-        
-        
-        
-        
-//
-//
-//        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
-//            do {
-//                let data = try Data(contentsOf: URL(fileURLWithPath: path))
-//                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-//                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let artworks = jsonResult["artworks"] as? [Any] {
-//                    print(artworks.count)
-//                }
-//            } catch {
-//                print("error here is:\(error)")
-//            }
-//        }
-
-        
-    }
-
-
-
