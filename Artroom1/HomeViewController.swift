@@ -12,6 +12,8 @@ import UIKit
    class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var chooseSelf: UIPickerView!
+    @IBOutlet weak var welcomeSign: UILabel!
+    @IBOutlet weak var welcomeMessage: UILabel!
     
     var chosenThings: Int!
     
@@ -39,12 +41,12 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        assignbackground()
-        
+        assignbackgrounds()
+//        assignTheBlur()
         
     }
     
-    func assignbackground(){
+    func assignbackgrounds(){
         let background = UIImage(named: "polke_faded")
         
         var imageView : UIImageView!
@@ -56,6 +58,37 @@ import UIKit
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
     }
+    
+//    func assignTheBlur(){
+//
+//
+//        let label: UILabel = welcomeSign
+//
+//        let blurEffect = UIBlurEffect(style: .light)
+//        var blurredEffectView = UIVisualEffectView(effect: blurEffect)
+////        let myColor : UIColor = UIColor( red: 0, green: 0, blue: 0, alpha: 0.4 )
+////        blurredEffectView.layer.borderColor = myColor.cgColor
+////        blurredEffectView.layer.borderWidth = 1.0
+//        //        blurredEffectView.contentMode = UILabel.ContentMode.center
+//        blurredEffectView.frame = label.bounds
+//        label.addSubview(blurredEffectView)
+// //       blurredEffectView.addSubview(label)
+////        view.addSubview(blurredEffectView)
+//        label.sendSubviewToBack(blurredEffectView)
+//////        self.view.sendSubviewToBack(blurredEffectView)
+//
+//
+////        blurredEffectView.contentView.addSubview(label)
+//
+////
+////        let vibrantEffect = UIVibrancyEffect(blurEffect: blurEffect)
+////        let vibrantEffectView = UIVisualEffectView(effect: vibrantEffect)
+////        vibrantEffectView.frame = imageView.bounds
+////        vibrantEffectView.contentView.addSubview(imageView)
+////        view.addSubview(vibrantEffectView)
+////        blurredEffectView.contentView.addSubview(vibrantEffectView)
+//
+//   }
     
     @IBAction func seeArt() {
         let controller: ArtViewController
