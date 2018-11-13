@@ -11,7 +11,7 @@ import UIKit
 
 
 class ArtViewController: UIViewController {
-    
+        
     var renderedForKeeping: Artwork?
     var thisIsATestArtArray: [Artwork] = []
     
@@ -33,14 +33,17 @@ class ArtViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animator = UIDynamicAnimator(referenceView: view)
-
         snapping = UISnapBehavior(item: artImage, snapTo: CGPoint(x: view.center.x, y: (view.center.y - 60) ))
         animator.addBehavior(snapping)
+        ArtworksDatabase.shared.apply()
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        selection = arrayOfArtworks.filter { (artwork: Artwork) -> Bool in
+        //I did this to make it compile - but this does not seem right.
+
+        selection = ArtworksDatabase.shared.arrayOfArtworks!.filter { (artwork: Artwork) -> Bool in
             artwork.attributes == chosenArtAttributes
         }
         renderFresh()
