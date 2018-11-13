@@ -35,15 +35,11 @@ class ArtViewController: UIViewController {
         animator = UIDynamicAnimator(referenceView: view)
         snapping = UISnapBehavior(item: artImage, snapTo: CGPoint(x: view.center.x, y: (view.center.y - 60) ))
         animator.addBehavior(snapping)
-        ArtworksDatabase.shared.apply()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //I did this to make it compile - but this does not seem right.
-
-        selection = ArtworksDatabase.shared.arrayOfArtworks!.filter { (artwork: Artwork) -> Bool in
+        selection = ArtworksDatabase.shared.arrayOfArtworks.filter { (artwork: Artwork) -> Bool in
             artwork.attributes == chosenArtAttributes
         }
         renderFresh()

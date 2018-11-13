@@ -14,11 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        //        Originally I tried to do this here:
-        //        ArtworksDatabase.shared.apply()
-        //        but it didn't do anything. 
-        
+
         return true
     }
 }

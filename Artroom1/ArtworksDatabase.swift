@@ -13,28 +13,21 @@ import UIKit
 
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
-
+    
     // internet said to make this a let variable, but then I couldn't populate it with json in the function, so it had to be var.
-    var arrayOfArtworks: [Artwork]?
+    let arrayOfArtworks: [Artwork]
     
-    private init() {}
-    
-        func apply() {
-    
-            func loadJson(_ fileName: String) -> [Artwork]? {
-                if let path = Bundle.main.path(forResource: "data", ofType: "json") {
-                    do {
-                        let data = try Data(contentsOf: URL(fileURLWithPath: path))
-                        let decoder = JSONDecoder()
-                        let jsonData = try decoder.decode(ResponseData.self, from: data)
-                        return jsonData.artwork
-                    } catch {
-                        print("error:\(error)")
-                    }
-                }
-                return nil
-            }
-            
-            arrayOfArtworks = loadJson("data")!
-        }
+    private init() {
+        arrayOfArtworks = loadJson("data")
+    }
 }
+
+private func loadJson(_ fileName: String) -> [Artwork] {
+    let path = Bundle.main.path(forResource: "data", ofType: "json")!
+    let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+    let decoder = JSONDecoder()
+    let jsonData = try! decoder.decode(ResponseData.self, from: data)
+    return jsonData.artwork
+    
+}
+
