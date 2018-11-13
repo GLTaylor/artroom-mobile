@@ -12,6 +12,8 @@ import UIKit
    class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var chooseSelf: UIPickerView!
+    @IBOutlet weak var welcomeSign: UILabel!
+    @IBOutlet weak var welcomeMessage: UILabel!
     
     var chosenThings: Int!
     
@@ -39,12 +41,10 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        assignbackground()
-        
-        
+        assignbackgrounds()
     }
     
-    func assignbackground(){
+    func assignbackgrounds(){
         let background = UIImage(named: "polke_faded")
         
         var imageView : UIImageView!
