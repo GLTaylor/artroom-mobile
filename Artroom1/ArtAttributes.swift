@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ArtAttributes: Equatable {
+struct ArtAttributes: Equatable, Codable {
     var mood: Mood
     var interest: Interest
 }

@@ -8,11 +8,12 @@
 
 import UIKit
 
-
     
    class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var chooseSelf: UIPickerView!
+    @IBOutlet weak var welcomeSign: UILabel!
+    @IBOutlet weak var welcomeMessage: UILabel!
     
     var chosenThings: Int!
     
@@ -27,9 +28,9 @@ import UIKit
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch (row, component) {
-        case (0, 0): return "happy"
-        case (1, 0): return "sad"
-        case (0, 1): return "cities"
+        case (0, 0): return "joyful"
+        case (1, 0): return "melancholy"
+        case (0, 1): return "tech"
         case (1, 1): return "nature"
         case (2, 0): return "meh"
         case (2, 1): return "humanity"
@@ -40,12 +41,12 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        assignbackground()
+        assignbackgrounds()
     }
     
-    func assignbackground(){
+    func assignbackgrounds(){
         let background = UIImage(named: "polke_faded")
-        // cound shuffle this later
+        
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill

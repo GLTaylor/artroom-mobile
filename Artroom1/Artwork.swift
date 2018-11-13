@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Artwork: Equatable {
+struct Artwork: Equatable, Codable {
     var title: String
     var image: String
     var attributes: ArtAttributes

@@ -12,84 +12,95 @@ import UIKit
 
 class ArtViewController: UIViewController {
     
+    var renderedForKeeping: Artwork?
+    var thisIsATestArtArray: [Artwork] = []
+    
     var chosenArtAttributes: ArtAttributes!
 
     @IBOutlet weak var artResults: UILabel!
     @IBOutlet weak var artImage: UIImageView!
-
-    var array_of_artworks = [
-        (Artwork(title: "Watching - Erin Nicholls", image: "erin nicholls", attributes: ArtAttributes(mood: .happy, interest: .cities ))), (Artwork(title: "Fall Scene - John Smith", image: "nowhere", attributes: ArtAttributes(mood: .happy, interest: .nature))), (Artwork(title: "Mikhail - Annie Leibovitz", image: "Mikhail - Annie Leibovitz", attributes: ArtAttributes(mood: .happy, interest: .humanity))), (Artwork(title: "Reflections - Erin Nicholls", image: "Reflections_nicholls", attributes: ArtAttributes(mood: .sad, interest: .cities))), (Artwork(title: "Norway Night - Sarah Hicks", image: "norway", attributes: ArtAttributes(mood: .sad, interest: .nature))), (Artwork(title: "Diagonal of May 25 - Dan Flavin", image: "Diagonal of May 25 - Dan Flavin", attributes: ArtAttributes(mood: .sad, interest: .humanity))), (Artwork(title: "Melbourne - Erin Nicholls", image: "melbourne", attributes: ArtAttributes(mood: .meh, interest: .cities))), (Artwork(title: "Isle Saint-Michel - Elger Esser", image: "Isle Saint-Michel - Elger Esser", attributes: ArtAttributes(mood: .meh, interest: .nature))), (Artwork(title: "Studies of Hands - Alexander Maw", image: "Studies of Hands - Alexander Maw", attributes: ArtAttributes(mood: .meh, interest: .humanity))), (Artwork(title: "Poveglia - Elger Esser", image: "Poveglia - Elger Esser", attributes: ArtAttributes(mood: .meh, interest: .nature))), (Artwork(title: "Drifting - Anthony Goicolea", image: "Drifting - Anthony Goicolea", attributes: ArtAttributes(mood: .meh, interest: .nature))), (Artwork(title: "My parents with their grandson, Ross - Annie Leibovitz", image: "My parents with their grandson, Ross - Annie Leibovitz", attributes: ArtAttributes(mood: .happy, interest: .humanity))), (Artwork(title: "Class Picture - Anthony Goicolea", image: "Class Picture - Anthony Goicolea", attributes: ArtAttributes(mood: .happy, interest: .humanity)))
-    ]
-   override func viewWillAppear(_ animated: Bool) {
     
-    func assignTheLabels(_ artwork: Artwork) {
+    private var selection: [Artwork] = []
+    private var animator: UIDynamicAnimator!
+    private var snapping: UISnapBehavior!
+   
+    func setCurrentArtwork(_ artwork: Artwork) {
         self.artResults.text = artwork.title
         self.artImage.image = UIImage (named: artwork.image)
+        renderedForKeeping = artwork
     }
-    
-    let selection = array_of_artworks.filter { (Artwork) -> Bool in
-        Artwork.attributes == chosenArtAttributes
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        animator = UIDynamicAnimator(referenceView: view)
+
+        snapping = UISnapBehavior(item: artImage, snapTo: CGPoint(x: view.center.x, y: (view.center.y - 60) ))
+        animator.addBehavior(snapping)
+        
     }
-    
-    let rendered = selection.randomElement()
-    assignTheLabels(rendered!)
-    
-    // return a random index of selection
-    // set the labels
-    // later for getting just one... func firstIndex(where: (Element) -> Bool) -> Int
-    
-    
-//    switch chosenArtAttributes.mood {
-//    case .happy:
-//        switch chosenArtAttributes.interest {
-//        case .cities:
-//            let artwork = Artwork(title: "Watching - Erin Nicholls", image: "erin nicholls")
-//            assignTheLabels(artwork)
-//
-//        case .nature:
-//            let artwork = Artwork(title: "Fall Scene - John Smith", image: "nowhere")
-//            assignTheLabels(artwork)
-//
-//        case .humanity:
-//            let artwork = Artwork(title: "Mikhail - Annie Leibovitz", image: "Mikhail - Annie Leibovitz")
-//            assignTheLabels(artwork)
-//        }
-//    case .sad:
-//        switch chosenArtAttributes.interest {
-//        case .cities:
-//            let artwork = Artwork(title: "Reflections - Erin Nicholls", image: "Reflections_nicholls")
-//            assignTheLabels(artwork)
-//
-//        case .nature:
-//            let artwork = Artwork(title: "Norway Night - Sarah Hicks", image: "norway")
-//            assignTheLabels(artwork)
-//
-//        case .humanity:
-//            let artything = Artwork(title: "Diagonal of May 25 - Dan Flavin", image: "Diagonal of May 25 - Dan Flavin")
-//            assignTheLabels(artything)
-//        }
-//
-//    case .meh:
-//        switch chosenArtAttributes.interest {
-//        case .cities:
-//            let artwork = Artwork(title: "Melbourne - Erin Nicholls", image: "melbourne")
-//            assignTheLabels(artwork)
-//
-//        case .nature:
-//            let artwork = Artwork(title: "Isle Saint-Michel - Elger Esser", image: "Isle Saint-Michel - Elger Esser")
-//            assignTheLabels(artwork)
-//
-//        case .humanity:
-//            let artwork = Artwork(title: "Studies of Hands - Alexander Maw", image: "Studies of Hands - Alexander Maw")
-//            assignTheLabels(artwork)
-//        }
-//
-//
-//     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        selection = arrayOfArtworks.filter { (artwork: Artwork) -> Bool in
+            artwork.attributes == chosenArtAttributes
+        }
+        renderFresh()
      }
     
+     func renderFresh() {
+        
+        if selection.isEmpty {
+            self.artResults.text = "No more art matches"
+            self.artImage.image = UIImage (named: "Empty Frame")
+
+        } else {
+            renderNextArt()
+        }
+    }
+    
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: self.view)
+        if let view = recognizer.view {
+            view.center = CGPoint(x:view.center.x + translation.x,
+                                  y:view.center.y + translation.y)
+        }
+        recognizer.setTranslation(CGPoint.zero, in: self.view)
+        
+        if  self.artResults.text == "No more art matches" {
+            recognizer.isEnabled = false
+        } else {
+            switch recognizer.state {
+            case .began, .changed:
+                animator.removeBehavior(snapping)
+            case .ended, .cancelled, .failed:
+                animator.addBehavior(snapping)
+                if(artImage.center.x > view.center.x) {
+                    thisIsATestArtArray.append(renderedForKeeping!)
+                    NSLog("gesture went right and sample array should grow");
+                    print(thisIsATestArtArray)
+                    renderFresh()
+                } else {
+                    renderFresh()
+                    NSLog("gesture went left");
+                    }
+            case .possible:
+                break
+                }
+            }
+        }
+
+ 
     @IBAction func playAgain() {
         self.dismiss(animated: true, completion: nil)
     }
 
+
+    private func renderNextArt() {
+        if let rendered = selection.randomElement(), let index = selection.firstIndex(of: rendered)  {
+            setCurrentArtwork(rendered)
+            selection.remove(at: index)
+        }
+    }
+    
+
 }
+
