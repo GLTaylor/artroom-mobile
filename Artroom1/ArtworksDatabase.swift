@@ -1,5 +1,5 @@
 //
-//  ArtPieceDB.swift
+//  ArtworksDatabase.swift
 //  Artroom1
 //
 //  Created by Taylor Lindsay on 10/31/18.
