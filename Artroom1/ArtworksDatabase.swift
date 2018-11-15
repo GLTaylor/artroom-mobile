@@ -13,8 +13,6 @@ import UIKit
 
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
-    
-    // internet said to make this a let variable, but then I couldn't populate it with json in the function, so it had to be var.
     let arrayOfArtworks: [Artwork]
     
     private init() {
@@ -28,6 +26,5 @@ private func loadJson(_ fileName: String) -> [Artwork] {
     let decoder = JSONDecoder()
     let jsonData = try! decoder.decode(ResponseData.self, from: data)
     return jsonData.artwork
-    
 }
 

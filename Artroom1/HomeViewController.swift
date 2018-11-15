@@ -63,8 +63,7 @@ import UIKit
 
         controller.chosenArtAttributes = choosingAttributes()
         present(controller, animated: true, completion: nil)
-    }
-    
+    }    
     
     
     private func choosingAttributes() -> ArtAttributes {
