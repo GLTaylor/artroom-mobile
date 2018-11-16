@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		124A7932218A0B4A0057FECB /* ArtPieceDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A7931218A0B4A0057FECB /* ArtPieceDB.swift */; };
+		124A7932218A0B4A0057FECB /* ArtworksDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */; };
 		124A7934218B51250057FECB /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 124A7933218B51250057FECB /* data.json */; };
 		124A7936218CBBBB0057FECB /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A7935218CBBBB0057FECB /* ResponseData.swift */; };
 		1286EC7721775F8E00CBB491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286EC7621775F8E00CBB491 /* AppDelegate.swift */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		124A7931218A0B4A0057FECB /* ArtPieceDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtPieceDB.swift; sourceTree = "<group>"; };
+		124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksDatabase.swift; sourceTree = "<group>"; };
 		124A7933218B51250057FECB /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		124A7935218CBBBB0057FECB /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		1286EC7321775F8E00CBB491 /* Artroom1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artroom1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +77,7 @@
 				1286ECD12182122100CBB491 /* ArtAttributes.swift */,
 				1286ECD3218212B700CBB491 /* Mood.swift */,
 				1286ECD5218212F100CBB491 /* Interest.swift */,
-				124A7931218A0B4A0057FECB /* ArtPieceDB.swift */,
+				124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */,
 				1286EC7A21775F8E00CBB491 /* Main.storyboard */,
 				1286EC7D21775F9100CBB491 /* Assets.xcassets */,
 				1286EC7F21775F9100CBB491 /* LaunchScreen.storyboard */,
@@ -168,7 +168,7 @@
 				124A7936218CBBBB0057FECB /* ResponseData.swift in Sources */,
 				1286ECD6218212F100CBB491 /* Interest.swift in Sources */,
 				1286EC7921775F8E00CBB491 /* HomeViewController.swift in Sources */,
-				124A7932218A0B4A0057FECB /* ArtPieceDB.swift in Sources */,
+				124A7932218A0B4A0057FECB /* ArtworksDatabase.swift in Sources */,
 				1286EC7721775F8E00CBB491 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
