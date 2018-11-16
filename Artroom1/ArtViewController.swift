@@ -76,6 +76,7 @@ class ArtViewController: UIViewController {
                     thisIsATestArtArray.append(renderedForKeeping!)
                     NSLog("gesture went right and sample array should grow");
                     print(thisIsATestArtArray)
+                    Toast.show(message: "Saved!", controller: self)
                     renderFresh()
                 } else {
                     renderFresh()
