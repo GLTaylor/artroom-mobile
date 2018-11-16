@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// this is supposed to be my handy singleton class
+// this is my handy singleton class
 
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
