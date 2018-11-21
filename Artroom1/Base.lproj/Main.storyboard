@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YWR-Bt-040">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Welcome To Artroom  " textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumFontSize="25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-To-mKY">
-                                <rect key="frame" x="0.0" y="108" width="414" height="87"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="87"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="Og7-XN-X4T"/>
@@ -78,6 +78,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pxP-GF-4IE"/>
                     <connections>
                         <outlet property="chooseSelf" destination="bti-Mt-Ffy" id="TGR-nW-FG0"/>
                         <outlet property="welcomeMessage" destination="5bW-Uo-qQH" id="gbw-8L-bfq"/>
@@ -87,6 +88,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="116.57608695652175"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wbs-tg-Ldd">
+            <objects>
+                <navigationController id="YWR-Bt-040" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RbC-Cq-Tg3">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BIw-X7-kbQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qE1-nW-oGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601" y="117"/>
         </scene>
         <!--ArtViewController-->
         <scene sceneID="dWS-UA-thO">
@@ -126,12 +143,27 @@
                                     <action selector="playAgain" destination="eoJ-1l-058" eventType="touchUpInside" id="ZtU-eV-laB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0U-Pr-MFC">
+                                <rect key="frame" x="317" y="42" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.79317179289999995" green="0.58388711280000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XZX-Lu-BpW"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" See Saved "/>
+                                <connections>
+                                    <action selector="seeSavedArt" destination="eoJ-1l-058" eventType="touchUpInside" id="a36-D5-kPj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9Rc-3I-unb" firstAttribute="top" secondItem="W0U-Pr-MFC" secondAttribute="bottom" constant="30" id="1jQ-nE-I0t"/>
                             <constraint firstItem="YT0-Zk-IbP" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="57" id="2ob-SL-t2b"/>
                             <constraint firstItem="YT0-Zk-IbP" firstAttribute="centerX" secondItem="fcz-8P-oyX" secondAttribute="centerX" id="4Y6-XR-O5m"/>
+                            <constraint firstItem="W0U-Pr-MFC" firstAttribute="top" secondItem="KYD-NC-ZPe" secondAttribute="top" constant="22" id="6Ts-2S-Can"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="centerX" secondItem="qhn-9a-pz1" secondAttribute="centerX" id="72H-Pe-Xdy"/>
+                            <constraint firstItem="KYD-NC-ZPe" firstAttribute="trailing" secondItem="W0U-Pr-MFC" secondAttribute="trailing" constant="17" id="LdA-SY-zGK"/>
                             <constraint firstItem="fcz-8P-oyX" firstAttribute="top" secondItem="YT0-Zk-IbP" secondAttribute="bottom" constant="88" id="Mqj-FN-SXc"/>
                             <constraint firstItem="YT0-Zk-IbP" firstAttribute="top" secondItem="9Rc-3I-unb" secondAttribute="bottom" constant="47" id="Uel-0V-F58"/>
                             <constraint firstItem="fcz-8P-oyX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="144" id="cb5-s2-NJG"/>
@@ -139,12 +171,14 @@
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="centerX" secondItem="YT0-Zk-IbP" secondAttribute="centerX" id="gyH-SM-3wV"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="34" id="hIb-Jy-fr1"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="top" secondItem="KYD-NC-ZPe" secondAttribute="top" constant="82" id="obd-3D-HXw"/>
+                            <constraint firstItem="W0U-Pr-MFC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="317" id="qET-4u-lty"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KYD-NC-ZPe"/>
                     </view>
                     <connections>
                         <outlet property="artImage" destination="9Rc-3I-unb" id="WdO-p5-NWs"/>
                         <outlet property="artResults" destination="YT0-Zk-IbP" id="GEL-2Y-nTe"/>
+                        <outlet property="seeSavedArtButton" destination="W0U-Pr-MFC" id="LKw-4n-PBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4Z-q8-eRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,6 +189,56 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="116.57608695652175"/>
+        </scene>
+        <!--SavedArtViewController-->
+        <scene sceneID="rb5-TA-bpr">
+            <objects>
+                <viewController storyboardIdentifier="SavedArtViewController" title="SavedArtViewController" id="Ril-Ka-hD5" customClass="SavedArtViewController" customModule="Artroom1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3tj-Pp-zDE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ch-xC-Yyp">
+                                <rect key="frame" x="69" y="139" width="276" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="Awc-me-NmB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdY-Fu-43Q">
+                                <rect key="frame" x="186" y="472" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="rpK-xi-le3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N61-ik-gnD">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="ukI-tO-UyB"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7ch-xC-Yyp" firstAttribute="top" secondItem="CIo-b6-ojH" secondAttribute="top" constant="119" id="3iK-S3-ol4"/>
+                            <constraint firstItem="7ch-xC-Yyp" firstAttribute="leading" secondItem="CIo-b6-ojH" secondAttribute="leading" constant="69" id="PKv-ZX-ijT"/>
+                            <constraint firstItem="xdY-Fu-43Q" firstAttribute="centerX" secondItem="CIo-b6-ojH" secondAttribute="centerX" id="iHJ-fJ-ZSf"/>
+                            <constraint firstItem="7ch-xC-Yyp" firstAttribute="centerX" secondItem="xdY-Fu-43Q" secondAttribute="centerX" id="lgP-49-wWp"/>
+                            <constraint firstItem="xdY-Fu-43Q" firstAttribute="top" secondItem="7ch-xC-Yyp" secondAttribute="bottom" constant="53" id="xA1-2V-3si"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CIo-b6-ojH"/>
+                    </view>
+                    <connections>
+                        <outlet property="savedArt" destination="7ch-xC-Yyp" id="9QZ-pW-E9m"/>
+                        <outlet property="savedArtTitle" destination="xdY-Fu-43Q" id="87F-pZ-Z7l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Br-EN-FaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1675.3623188405797" y="116.57608695652175"/>
         </scene>
     </scenes>
 </document>

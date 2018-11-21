@@ -91,9 +91,24 @@ class ArtViewController: UIViewController {
     @IBAction func playAgain() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBOutlet var seeSavedArtButton: UIButton? 
+    @IBAction func seeSavedArt() {
+        let controller: SavedArtViewController
+        controller = storyboard?.instantiateViewController(withIdentifier: "SavedArtViewController") as! SavedArtViewController
+    
+        controller.arrayOfSavedArt = usersLikedArtworks
+        self.navigationController?.pushViewController(controller, animated: true)
+//        present(controller, animated: true, completion: nil)
+    }
 
 
     private func renderNextArt() {
+        if usersLikedArtworks == [] {
+            seeSavedArtButton?.isEnabled = false
+        } else {
+            seeSavedArtButton?.isEnabled = true
+        }
         if let rendered = selection.randomElement(), let index = selection.firstIndex(of: rendered)  {
             setCurrentArtwork(rendered)
             selection.remove(at: index)

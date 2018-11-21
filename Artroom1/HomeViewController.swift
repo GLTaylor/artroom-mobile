@@ -62,8 +62,9 @@ import UIKit
         controller = storyboard?.instantiateViewController(withIdentifier: "ArtViewController") as! ArtViewController
 
         controller.chosenArtAttributes = choosingAttributes()
-        present(controller, animated: true, completion: nil)
-    }    
+        self.navigationController?.pushViewController(controller, animated: true)
+//        present(controller, animated: true, completion: nil)
+    }
     
     
     private func choosingAttributes() -> ArtAttributes {

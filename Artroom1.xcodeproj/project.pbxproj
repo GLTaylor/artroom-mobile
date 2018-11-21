@@ -20,6 +20,7 @@
 		1286ECD4218212B700CBB491 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD3218212B700CBB491 /* Mood.swift */; };
 		1286ECD6218212F100CBB491 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD5218212F100CBB491 /* Interest.swift */; };
 		1286ECD821821CA200CBB491 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD721821CA200CBB491 /* Artwork.swift */; };
+		129FE3AC21A472200027B11F /* SavedArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FE3AB21A472200027B11F /* SavedArtViewController.swift */; };
 		12E8FF59219EBFA1007601B1 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8FF58219EBFA1007601B1 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		1286ECD3218212B700CBB491 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		1286ECD5218212F100CBB491 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		1286ECD721821CA200CBB491 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		129FE3AB21A472200027B11F /* SavedArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArtViewController.swift; sourceTree = "<group>"; };
 		12E8FF58219EBFA1007601B1 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				1286EC7621775F8E00CBB491 /* AppDelegate.swift */,
 				1286EC7821775F8E00CBB491 /* HomeViewController.swift */,
 				1286ECB12178F34D00CBB491 /* ArtViewController.swift */,
+				129FE3AB21A472200027B11F /* SavedArtViewController.swift */,
 				1286ECD721821CA200CBB491 /* Artwork.swift */,
 				1286ECD12182122100CBB491 /* ArtAttributes.swift */,
 				1286ECD3218212B700CBB491 /* Mood.swift */,
@@ -168,6 +171,7 @@
 				1286ECD22182122100CBB491 /* ArtAttributes.swift in Sources */,
 				1286ECD821821CA200CBB491 /* Artwork.swift in Sources */,
 				1286ECB22178F34D00CBB491 /* ArtViewController.swift in Sources */,
+				129FE3AC21A472200027B11F /* SavedArtViewController.swift in Sources */,
 				124A7936218CBBBB0057FECB /* ResponseData.swift in Sources */,
 				1286ECD6218212F100CBB491 /* Interest.swift in Sources */,
 				1286EC7921775F8E00CBB491 /* HomeViewController.swift in Sources */,
