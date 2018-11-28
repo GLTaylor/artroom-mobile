@@ -20,6 +20,7 @@
 		1286ECD4218212B700CBB491 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD3218212B700CBB491 /* Mood.swift */; };
 		1286ECD6218212F100CBB491 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD5218212F100CBB491 /* Interest.swift */; };
 		1286ECD821821CA200CBB491 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD721821CA200CBB491 /* Artwork.swift */; };
+		12E8FF59219EBFA1007601B1 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8FF58219EBFA1007601B1 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1286ECD3218212B700CBB491 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		1286ECD5218212F100CBB491 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		1286ECD721821CA200CBB491 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		12E8FF58219EBFA1007601B1 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				1286ECD3218212B700CBB491 /* Mood.swift */,
 				1286ECD5218212F100CBB491 /* Interest.swift */,
 				124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */,
+				12E8FF58219EBFA1007601B1 /* Toast.swift */,
 				1286EC7A21775F8E00CBB491 /* Main.storyboard */,
 				1286EC7D21775F9100CBB491 /* Assets.xcassets */,
 				1286EC7F21775F9100CBB491 /* LaunchScreen.storyboard */,
@@ -168,6 +171,7 @@
 				124A7936218CBBBB0057FECB /* ResponseData.swift in Sources */,
 				1286ECD6218212F100CBB491 /* Interest.swift in Sources */,
 				1286EC7921775F8E00CBB491 /* HomeViewController.swift in Sources */,
+				12E8FF59219EBFA1007601B1 /* Toast.swift in Sources */,
 				124A7932218A0B4A0057FECB /* ArtworksDatabase.swift in Sources */,
 				1286EC7721775F8E00CBB491 /* AppDelegate.swift in Sources */,
 			);

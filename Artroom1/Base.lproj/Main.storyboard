@@ -27,11 +27,11 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zdc-a6-XcR"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt5-R8-Pom">
-                                <rect key="frame" x="177" y="660" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gt5-R8-Pom">
+                                <rect key="frame" x="173" y="660" width="68" height="30"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Discover"/>
+                                <state key="normal" title=" Discover "/>
                                 <connections>
                                     <action selector="seeArt" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Z1-i5-1qV"/>
                                 </connections>
@@ -46,11 +46,11 @@
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Artroom" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumFontSize="25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-To-mKY">
-                                <rect key="frame" x="37" y="108" width="340" height="87"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Welcome To Artroom  " textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumFontSize="25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-To-mKY">
+                                <rect key="frame" x="0.0" y="108" width="414" height="87"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="Og7-XN-X4T"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="Og7-XN-X4T"/>
                                     <constraint firstAttribute="height" constant="87" id="d30-kh-7uQ"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="8Fl-8g-aDb"/>
@@ -68,11 +68,11 @@
                             <constraint firstItem="bti-Mt-Ffy" firstAttribute="centerX" secondItem="gt5-R8-Pom" secondAttribute="centerX" id="JUh-pO-R8o"/>
                             <constraint firstItem="XY2-To-mKY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MNh-jh-UFW"/>
                             <constraint firstItem="XY2-To-mKY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pp5-Xo-ugJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XY2-To-mKY" secondAttribute="trailing" constant="37" id="Q09-UN-60o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XY2-To-mKY" secondAttribute="trailing" id="Q09-UN-60o"/>
                             <constraint firstItem="XY2-To-mKY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VVo-nw-MjL"/>
                             <constraint firstItem="gt5-R8-Pom" firstAttribute="top" secondItem="bti-Mt-Ffy" secondAttribute="bottom" constant="77" id="WOp-T7-ozR"/>
                             <constraint firstItem="XY2-To-mKY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WZA-ye-YyK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XY2-To-mKY" secondAttribute="trailing" constant="37" id="Wbz-ml-GJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XY2-To-mKY" secondAttribute="trailing" id="Wbz-ml-GJp"/>
                             <constraint firstItem="5bW-Uo-qQH" firstAttribute="centerX" secondItem="bti-Mt-Ffy" secondAttribute="centerX" id="eGx-gr-AlE"/>
                             <constraint firstItem="5bW-Uo-qQH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="vFz-AI-IH5"/>
                         </constraints>
@@ -105,7 +105,6 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art Results" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT0-Zk-IbP">
                                 <rect key="frame" x="57" y="516" width="300" height="45"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="JgK-XM-D9C"/>
@@ -119,7 +118,7 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4Oh-aw-51M"/>
-                                    <constraint firstAttribute="width" constant="126" id="yjX-iJ-vOd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="126" id="yjX-iJ-vOd"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title=" Back to the Start "/>

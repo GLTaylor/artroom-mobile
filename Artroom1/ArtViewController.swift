@@ -9,12 +9,11 @@
 import Foundation
 import UIKit
 
+var usersLikedArtworks: [Artwork] = []
 
 class ArtViewController: UIViewController {
         
     var renderedForKeeping: Artwork?
-    var thisIsATestArtArray: [Artwork] = []
-    
     var chosenArtAttributes: ArtAttributes!
 
     @IBOutlet weak var artResults: UILabel!
@@ -73,9 +72,10 @@ class ArtViewController: UIViewController {
             case .ended, .cancelled, .failed:
                 animator.addBehavior(snapping)
                 if(artImage.center.x > view.center.x) {
-                    thisIsATestArtArray.append(renderedForKeeping!)
+                    usersLikedArtworks.append(renderedForKeeping!)
                     NSLog("gesture went right and sample array should grow");
-                    print(thisIsATestArtArray)
+                    print(usersLikedArtworks)
+                    Toast.show(message: "Saved!", controller: self)
                     renderFresh()
                 } else {
                     renderFresh()
