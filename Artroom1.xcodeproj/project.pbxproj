@@ -78,27 +78,51 @@
 		1286EC7521775F8E00CBB491 /* Artroom1 */ = {
 			isa = PBXGroup;
 			children = (
-				1286EC7621775F8E00CBB491 /* AppDelegate.swift */,
-				1286EC7821775F8E00CBB491 /* HomeViewController.swift */,
-				1286ECB12178F34D00CBB491 /* ArtViewController.swift */,
-				129FE3AB21A472200027B11F /* SavedArtViewController.swift */,
-				1286ECD721821CA200CBB491 /* Artwork.swift */,
-				1286ECD12182122100CBB491 /* ArtAttributes.swift */,
-				1286ECD3218212B700CBB491 /* Mood.swift */,
-				1286ECD5218212F100CBB491 /* Interest.swift */,
+				129FE42021AFDDBC0027B11F /* Controller */,
+				129FE41F21AFDD4B0027B11F /* View */,
+				129FE41E21AFDCFF0027B11F /* Model */,
 				124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */,
+				1286EC7D21775F9100CBB491 /* Assets.xcassets */,
 				12E8FF58219EBFA1007601B1 /* Toast.swift */,
 				129FE3F421A72E2B0027B11F /* iCarousel.h */,
 				129FE3F521A72E2B0027B11F /* iCarousel.m */,
-				1286EC7A21775F8E00CBB491 /* Main.storyboard */,
-				1286EC7D21775F9100CBB491 /* Assets.xcassets */,
-				1286EC7F21775F9100CBB491 /* LaunchScreen.storyboard */,
 				1286EC8221775F9100CBB491 /* Info.plist */,
 				124A7933218B51250057FECB /* data.json */,
-				124A7935218CBBBB0057FECB /* ResponseData.swift */,
 				129FE3F321A72E290027B11F /* Artroom1-Bridging-Header.h */,
 			);
 			path = Artroom1;
+			sourceTree = "<group>";
+		};
+		129FE41E21AFDCFF0027B11F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				124A7935218CBBBB0057FECB /* ResponseData.swift */,
+				1286ECD721821CA200CBB491 /* Artwork.swift */,
+				1286ECD3218212B700CBB491 /* Mood.swift */,
+				1286ECD5218212F100CBB491 /* Interest.swift */,
+				1286ECD12182122100CBB491 /* ArtAttributes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		129FE41F21AFDD4B0027B11F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1286EC7A21775F8E00CBB491 /* Main.storyboard */,
+				1286EC7F21775F9100CBB491 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		129FE42021AFDDBC0027B11F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1286EC7821775F8E00CBB491 /* HomeViewController.swift */,
+				1286EC7621775F8E00CBB491 /* AppDelegate.swift */,
+				1286ECB12178F34D00CBB491 /* ArtViewController.swift */,
+				129FE3AB21A472200027B11F /* SavedArtViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
