@@ -12,19 +12,18 @@ import UIKit
 class SavedArtViewController: UIViewController {
     
     var arrayOfSavedArt: [Artwork]?
-    var artOnDisplay: Artwork?
+    var savedArtImage: UIImageView!
+
     
-    @IBOutlet weak var savedArt: UIImageView?
-    @IBOutlet weak var savedArtTitle: UILabel?
-    
-    
-    func setCurrentArtwork(_ artwork: Artwork) {
-        self.savedArtTitle!.text = artwork.title
-        self.savedArt!.image = UIImage (named: artwork.image)
-    }
+    @IBOutlet weak var savedArt: iCarousel?
+//    @IBOutlet weak var savedArtTitle: UILabel?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        savedArt!.type = .invertedCylinder
+        savedArt!.contentMode = .scaleAspectFit
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Over", style: .plain, target: self, action: #selector(startOver))
     }
     
@@ -33,17 +32,30 @@ class SavedArtViewController: UIViewController {
             navigationController.popToRootViewController(animated: true)
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        artOnDisplay = arrayOfSavedArt?.first
-        setCurrentArtwork(artOnDisplay!)
+    }
+}
+    
+extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return arrayOfSavedArt!.count
     }
     
-//   We don't want this, it actually re-renders the last VC, refreshing the art as well. Not good.
-//    @IBAction func playAgain() {
-//        self.dismiss(animated: true, completion: nil)
-//    }
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        if view == nil {
+            savedArtImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
+            savedArtImage.contentMode = .scaleAspectFit
+        } else {
+            savedArtImage = view as? UIImageView
+        }
+        let nameOfImage = arrayOfSavedArt?[index].image
+        savedArtImage.image = UIImage(named: nameOfImage ?? "Empty Frame")
+        return savedArtImage
+      }
     
+        
+    }
     
-}
+

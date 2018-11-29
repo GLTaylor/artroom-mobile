@@ -22,6 +22,8 @@ class ArtViewController: UIViewController {
     private var selection: [Artwork] = []
     private var animator: UIDynamicAnimator!
     private var snapping: UISnapBehavior!
+    
+    var selectedIndex: Int!
    
     func setCurrentArtwork(_ artwork: Artwork) {
         self.artResults.text = artwork.title
@@ -34,13 +36,13 @@ class ArtViewController: UIViewController {
         animator = UIDynamicAnimator(referenceView: view)
         snapping = UISnapBehavior(item: artImage, snapTo: CGPoint(x: view.center.x, y: (view.center.y - 60) ))
         animator.addBehavior(snapping)
+        selection = ArtworksDatabase.shared.arrayOfArtworks.filter { (artwork: Artwork) -> Bool in
+            artwork.attributes == chosenArtAttributes
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        selection = ArtworksDatabase.shared.arrayOfArtworks.filter { (artwork: Artwork) -> Bool in
-            artwork.attributes == chosenArtAttributes
-        }
         renderFresh()
      }
     
@@ -73,11 +75,13 @@ class ArtViewController: UIViewController {
                 animator.addBehavior(snapping)
                 if(artImage.center.x > view.center.x) {
                     usersLikedArtworks.append(renderedForKeeping!)
-                    NSLog("gesture went right and sample array should grow");
                     print(usersLikedArtworks)
                     Toast.show(message: "Saved!", controller: self)
+                    
+                    selection.remove(at: selectedIndex)
                     renderFresh()
                 } else {
+                    selection.remove(at: selectedIndex)
                     renderFresh()
                     NSLog("gesture went left");
                     }
@@ -87,11 +91,6 @@ class ArtViewController: UIViewController {
             }
         }
 
- 
-    @IBAction func playAgain() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBOutlet var seeSavedArtButton: UIButton? 
     @IBAction func seeSavedArt() {
         let controller: SavedArtViewController
@@ -99,19 +98,22 @@ class ArtViewController: UIViewController {
     
         controller.arrayOfSavedArt = usersLikedArtworks
         self.navigationController?.pushViewController(controller, animated: true)
-//        present(controller, animated: true, completion: nil)
     }
 
 
     private func renderNextArt() {
+        enablesSavedArtsButtonIfNeeded()
+        if let randomArtwork = selection.randomElement(), let index = selection.firstIndex(of: randomArtwork)  {
+            selectedIndex = index
+            setCurrentArtwork(randomArtwork)
+        }
+    }
+    
+    func enablesSavedArtsButtonIfNeeded() {
         if usersLikedArtworks == [] {
             seeSavedArtButton?.isEnabled = false
         } else {
             seeSavedArtButton?.isEnabled = true
-        }
-        if let rendered = selection.randomElement(), let index = selection.firstIndex(of: rendered)  {
-            setCurrentArtwork(rendered)
-            selection.remove(at: index)
         }
     }
     
