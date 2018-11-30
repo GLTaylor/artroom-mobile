@@ -50,10 +50,29 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
         } else {
             savedArtImage = view as? UIImageView
         }
-        let nameOfImage = arrayOfSavedArt?[index].image
-        savedArtImage.image = UIImage(named: nameOfImage ?? "Empty Frame")
+        let nameOfImage = arrayOfSavedArt?[index].image.url
+        loadImageFromURL(nameOfImage!)
         return savedArtImage
       }
+    
+    func loadImageFromURL(_ givenurl: String) {
+        guard let url = URL(string: givenurl) else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { (place, response, errpr) in
+            guard let place = place else {
+                print("location went wrong")
+                return
+            }
+            let image = UIImage(data: place)
+            DispatchQueue.main.async {
+                self.savedArtImage.image = image
+            }
+        }
+        
+        task.resume()
+    }
+    
     
         
     }

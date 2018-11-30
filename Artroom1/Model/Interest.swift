@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Interest: Int, Codable {
+enum Interest: String, Codable {
     case tech
     case nature
     case humanity

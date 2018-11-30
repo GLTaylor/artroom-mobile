@@ -1,132 +1,1157 @@
-{
-    "artwork":[
-        {
-            "title":"Watching - Erin Nicholls",
-            "image":"erin nicholls",
-            "attributes":{
-                "mood":0,
-                "interest":0
-            }
+[
+    {
+        "title":"Untitled",
+        "mood":"wild",
+        "image":{
+            "url":"https://res.cloudinary.com/ginnywhx/image/upload/v1534845390/ren_hang_2"
         },
-        {
-            "title":"Fall Scene - John Smith",
-            "image":"nowhere",
-            "attributes":{
-                "mood":0,
-                "interest":1
-            }
-        },
-        {
-            "title":"Mikhail - Annie Leibovitz",
-            "image":"Mikhail - Annie Leibovitz",
-            "attributes":{
-                "mood":0,
-                "interest":2
-            }
-        },
-        {
-            "title":"Reflections - Erin Nicholls",
-            "image":"Reflections_nicholls",
-            "attributes":{
-                "mood":1,
-                "interest":0
-            }
-        },
-        {
-            "title":"Norway Night - Sarah Hicks",
-            "image":"norway",
-            "attributes":{
-                "mood":1,
-                "interest":1
-            }
-        },
-        {
-            "title":"Diagonal of May 25 - Dan Flavin",
-            "image":"Diagonal of May 25 - Dan Flavin",
-            "attributes":{
-                "mood":1,
-                "interest":2
-            }
-        },
-        {
-            "title":"Melbourne - Erin Nicholls",
-            "image":"melbourne",
-            "attributes":{
-                "mood":2,
-                "interest":0
-            }
-        },
-        {
-            "title":"Isle Saint-Michel - Elger Esser",
-            "image":"Isle Saint-Michel - Elger Esser",
-            "attributes":{
-                "mood":2,
-                "interest":1
-            }
-        },
-        {
-            "title":"Studies of Hands - Alexander Maw",
-            "image":"Studies of Hands - Alexander Maw",
-            "attributes":{
-                "mood":2,
-                "interest":2
-            }
-        },
-        {
-            "title":"Poveglia - Elger Esser",
-            "image":"Poveglia - Elger Esser",
-            "attributes":{
-                "mood":2,
-                "interest":1
-            }
-        },
-        {
-            "title":"Drifting - Anthony Goicolea",
-            "image":"Drifting - Anthony Goicolea",
-            "attributes":{
-                "mood":2,
-                "interest":1
-            }
-        },
-        {
-            "title":"My parents with their grandson, Ross - Annie Leibovitz",
-            "image":"My parents with their grandson, Ross - Annie Leibovitz",
-            "attributes":{
-                "mood":0,
-                "interest":2
-            }
-        },
-        {
-            "title":"Class Picture - Anthony Goicolea",
-            "image":"Class Picture - Anthony Goicolea",
-            "attributes":{
-                "mood":0,
-                "interest":2
-            }
-        },
-        {
-            "title":"By Lantern Light - Erin Nicholls",
-            "image":"By Lantern Light - Erin Nicholls",
-            "attributes":{
-                "mood":0,
-                "interest":2
-            }
-        },
-        {
-            "title":"Lighting of the Sails - Jonathan Zawada",
-            "image":"Lighting of the Sails - Jonathan Zawada",
-            "attributes":{
-                "mood":0,
-                "interest":0
-            }
-        },
-        {
-            "title":"Piano Lesson - Maya Brodsky",
-            "image":"Piano Lesson - Maya Brodsky",
-            "attributes":{
-                "mood":1,
-                "interest":2
-            }
+        "interest":"eroticism",
+        "artist":{
+            "name":"Ren Hang"
         }
-    ]
-}
+    },
+    {
+        "title":"Study of Perspective - Tiananmen Square",
+        "mood":"wild",
+        "image":{
+            "url":"https://res.cloudinary.com/ginnywhx/image/upload/v1534847113/ai_wei_wei_1"
+        },
+        "interest":"politics",
+        "artist":{
+            "name":"Ai Wei Wei"
+        }
+    },
+    {
+        "title":"Untitled",
+        "mood":"poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535545334/d2f5o3lqaymu1hcorpo1.jpg"
+        },
+        "interest":"eroticism",
+        "artist":{
+            "name":"Ren Hang"
+        }
+    },
+    {
+        "title":"Urd, Verdandi, Skuld (The Norns)",
+        "mood":"melancholy",
+        "image":{
+            "url":"https://res.cloudinary.com/ginnywhx/image/upload/v1534856844/1e9bb03e6624544e5cfbd9571ecdfe90"
+        },
+        "interest":"death",
+        "artist":{
+            "name":"Anselm Kiefer"
+        }
+    },
+    {
+        "title":"Untitled(Lapis-Lazuli)",
+        "mood":"Poetic",
+        "image":{
+            "url":"https://res.cloudinary.com/ginnywhx/image/upload/v1533904063/sigmar_polke_2"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Sigmar Polke"
+        }
+    },
+    {
+        "title":"The weather project",
+        "mood":"Joyful",
+        "image":{
+            "url":"https://res.cloudinary.com/ginnywhx/image/upload/v1535101225/the_weather_project"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Olafur Eliasson"
+        }
+    },
+    {
+        "title":"Face To Face",
+        "mood":"Joyful",
+        "image":{
+            "url":"https://res.cloudinary.com/ginnywhx/image/upload/v1535101209/grassterpiece"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Heather Ackroyd \u0026 Dan Harvey"
+        }
+    },
+    {
+        "title":"Mikhail Baryshnikov and Rob Besserer, Cumberland Island, Georgia",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535463331/fa69qy1uqzwxivrpdiqp.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Annie Leibovitz"
+        }
+    },
+    {
+        "title":"Lighting of the Sails: Metamathemagical",
+        "mood":"Joyful",
+        "image":{
+            "url":"https://res.cloudinary.com/ginnywhx/image/upload/v1535108656/zawada_real"
+        },
+        "interest":"Tech",
+        "artist":{
+            "name":"Jonathan Zawada"
+        }
+    },
+    {
+        "title":"My parents with their grandson, Ross",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535463170/z49pe6ppzbl7rwftfrci.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Annie Leibovitz"
+        }
+    },
+    {
+        "title":"Golden Grassland",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535451097/q71mmrjnbz4ybnptw6qk.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Ryan McGinley "
+        }
+    },
+    {
+        "title":"Jake's Eyes",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535450969/zrgmv8abnltmfklbig9a.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Ryan McGinley "
+        }
+    },
+    {
+        "title":"Isabelle Allen",
+        "mood":"Melancholy",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535452077/wsxcmrofcqhamq4s7yvz.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Annie Leibovitz"
+        }
+    },
+    {
+        "title":"The Son Of A Migrant From Syria ",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535547069/xaqr6hnhhupw0lpzvyvo.png"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Banksy"
+        }
+    },
+    {
+        "title":"Kiss Explosion",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535450875/ysixf1adxejnz9vt7xom.jpg"
+        },
+        "interest":"Sexuality",
+        "artist":{
+            "name":"Ryan McGinley "
+        }
+    },
+    {
+        "title":"Natural Stabilizer",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535450753/hsqlnb353gtsughs4bea.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Ryan McGinley "
+        }
+    },
+    {
+        "title":"Highway",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535450062/tdjncmjxo1x40lthumly.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Ryan McGinley "
+        }
+    },
+    {
+        "title":"Susan at the house on Hedges Lane",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535464123/cuq3p1viuji3yo5thizw.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Annie Leibovitz"
+        }
+    },
+    {
+        "title":"Ninfa - Nycheia ",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535464671/tqx625kkhtybqszaesmg.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Elger Esser"
+        }
+    },
+    {
+        "title":"52 Berck",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535464763/a8ng4xtelcrzys1u4xua.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Elger Esser"
+        }
+    },
+    {
+        "title":"Poveglia",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535464820/kwgjvonl8ffngjtrre6k.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Elger Esser"
+        }
+    },
+    {
+        "title":"Akko II",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535464884/kydgliciuvggnlve6yw9.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Elger Esser"
+        }
+    },
+    {
+        "title":"Ilôt Saint-Michel ",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535465099/m5ogdxhsx2uamvarkhdv.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Elger Esser"
+        }
+    },
+    {
+        "title":"Asia One ",
+        "mood":"Melancholy",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535465278/xue8fjjxgodhhag6elvu.jpg"
+        },
+        "interest":"Tech",
+        "artist":{
+            "name":"Cao Fei"
+        }
+    },
+    {
+        "title":"Green Pink Caviar (still)",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535466337/xqlru693ur18jajyvpmb.jpg"
+        },
+        "interest":"Sexuality",
+        "artist":{
+            "name":"Marilyn Minter"
+        }
+    },
+    {
+        "title":"Black Orchid",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535466460/jbdn4gsjoapt66lj6k1l.jpg"
+        },
+        "interest":"Sexuality",
+        "artist":{
+            "name":"Marilyn Minter"
+        }
+    },
+    {
+        "title":"Still from \"Haze and Fog\"",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535466794/sjavgfyvceuaa8tzwoup.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Cao Fei"
+        }
+    },
+    {
+        "title":"Marbles in my Mouth",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535640333/jkaw6c5lhk9mbzn62xcc.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Dan Colen"
+        }
+    },
+    {
+        "title":"Blue Poles",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535467420/ew041i40h1z2mnozeniv.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Marilyn Minter"
+        }
+    },
+    {
+        "title":"Sunburned GSP#480, Yukon",
+        "mood":"Melancholy",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535467980/kbf9xfjzyvd6wcf4fgiq.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Chris McCaw"
+        }
+    },
+    {
+        "title":"Sunburned GSP#839",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535467325/vctjpuwjcglwpqsiy85x.jpg"
+        },
+        "interest":"Tech",
+        "artist":{
+            "name":"Chris McCaw"
+        }
+    },
+    {
+        "title":"The Cloud and the Ghost",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535640707/g9fr6zsj6xa1vn2692oo.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Dan Colen"
+        }
+    },
+    {
+        "title":"Maia",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535644290/kbkpjygvxzlvpti2bayx.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Dan Colen"
+        }
+    },
+    {
+        "title":"Sunburned GSP#323,  Santa Cruz Mountains",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535469492/m3dg6vigxrxvjcdealdq.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Chris McCaw"
+        }
+    },
+    {
+        "title":"Smoker, 1 (Mouth, 12)",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535545995/g4g2o2rcjqtmbuvuqus1.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Tom Wesselmann "
+        }
+    },
+    {
+        "title":"Self Portrait ",
+        "mood":"Joyful ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535492540/b7omjq0afgvusoxhldrj.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Robert Mapplethorpe"
+        }
+    },
+    {
+        "title":"Untitled (Blue Underwear) ",
+        "mood":"Meh ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535492835/owafe2hxql2ax73pg07c.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Robert Mapplethorpe"
+        }
+    },
+    {
+        "title":"Watching",
+        "mood":"Melancholy",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535707592/azcw3a8dvql93soupsaa.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Erin Nicholls"
+        }
+    },
+    {
+        "title":"Reflections",
+        "mood":"Melancholy",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535707811/xxbacuzrnvyhzsi5pcuf.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Erin Nicholls"
+        }
+    },
+    {
+        "title":"Vague as Fog",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536158163/zsemewgh86mwrqvvc4os.jpg"
+        },
+        "interest":"Sexuality",
+        "artist":{
+            "name":"Sam Lock"
+        }
+    },
+    {
+        "title":"Jim, Sausalito",
+        "mood":"Wild ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535493033/bfsrhs8hijqsakcp5pxn.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Robert Mapplethorpe"
+        }
+    },
+    {
+        "title":"Calla Lilly",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535493238/s0xh0oorqwdd5iuuw57h.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Robert Mapplethorpe"
+        }
+    },
+    {
+        "title":"The Anatomically Correct Oscar",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535493344/xzhptrd1zfwyjtcim1ps.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Guerrilla Girls"
+        }
+    },
+    {
+        "title":"Revelation ",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535642710/yty0hfbxowpozkzqn680.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Cynthia Stanchak"
+        }
+    },
+    {
+        "title":"The morning colors",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536158410/tnhcfukzxjyicstoqkle.jpg"
+        },
+        "interest":"Sexuality",
+        "artist":{
+            "name":"Sam Lock"
+        }
+    },
+    {
+        "title":"Madonna and Child",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536158667/w4z83xq3zqiqipvui4ei.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Alexander Maw"
+        }
+    },
+    {
+        "title":"Do women have to be naked to get Into the Met.Musem?",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535493439/vqm9vtjxmirrjgfcwr8j.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Guerrilla Girls"
+        }
+    },
+    {
+        "title":"The Advantages of Being a Woman Artist ",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535493529/zt5tddsampglbrwvr9fo.jpg"
+        },
+        "interest":"Politics ",
+        "artist":{
+            "name":"Guerrilla Girls"
+        }
+    },
+    {
+        "title":"Incident in the corridor near the kitchen",
+        "mood":"Meh ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535493824/fax1z2wwvunrl9qzktop.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Ilya Kabakov"
+        }
+    },
+    {
+        "title":"Running to Safety",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535642819/bciqsuzc9z4p08shmblt.webp"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Cynthia Stanchak"
+        }
+    },
+    {
+        "title":"The train leaves",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536159782/q7lhkbj7ftwycb71ipvu.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Sam Lock"
+        }
+    },
+    {
+        "title":"Kissing Coppers",
+        "mood":"Joyful ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535528281/lw8aydhcelhmnavcbwtr.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Banksy"
+        }
+    },
+    {
+        "title":"Rage, the Flower Thrower",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535528902/qmni1sgjk45cjx3ildsu.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Banksy"
+        }
+    },
+    {
+        "title":"Study after Velazquez's Portrait of Pope Innocent X",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535549381/iqvoafxrwtcrtenzla0j.jpg"
+        },
+        "interest":"Death ",
+        "artist":{
+            "name":"Francis Bacon "
+        }
+    },
+    {
+        "title":"Refuge",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535643025/krr0wlbhexqhilaw4diz.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Cynthia Stanchak"
+        }
+    },
+    {
+        "title":"On the night",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536159857/pbz4iuibxrvw6a7uny05.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Sam Lock"
+        }
+    },
+    {
+        "title":"Piano Lesson",
+        "mood":"Melancholy",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536160262/uuvofybiljjmbnqv6png.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Maya Brodsky"
+        }
+    },
+    {
+        "title":"Vitebsk",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536160426/imwszoxvvfqlhaoca13c.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Maya Brodsky"
+        }
+    },
+    {
+        "title":"Mona Lisa Bazooka",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535530378/rxjszn7tcy5lwjxjvkjj.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Banksy"
+        }
+    },
+    {
+        "title":"Power Washer",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535531027/kxusyutszarkrkgyobmm.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Banksy"
+        }
+    },
+    {
+        "title":"Untitled, \"Sex Pictures\" Series",
+        "mood":"Wild ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535532156/xhpl0f5sgoxcs07metml.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Cindy Sherman "
+        }
+    },
+    {
+        "title":"TERRITORIAL ",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637329/ba8fjm1xeq2gacfxz79d.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"ISLAND",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637392/irhzfn1oie0opfbhgtvj.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"GRAVE TOP",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637464/rmmzxcjaurgmqanorxoe.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"DRIFTING",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637516/gqpcfnydqaraukaemapi.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"Mao ",
+        "mood":"Joyful ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535532459/jo6krl5gzsqnrkfgf7qk.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Andy Warhol"
+        }
+    },
+    {
+        "title":"Sunflower Seeds",
+        "mood":"Meh",
+        "image":{
+            "url":"https://res.cloudinary.com/ginnywhx/image/upload/v1534856243/the_unilever_series__ai_weiwei_sunflower_seeds_1"
+        },
+        "interest":"Politics ",
+        "artist":{
+            "name":"Ai Wei Wei"
+        }
+    },
+    {
+        "title":"Shadows",
+        "mood":"Joyful ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535533078/hjzpfh2fknzl3lwxrmgj.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Andy Warhol"
+        }
+    },
+    {
+        "title":"GARDEN",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637589/qtahcpoggyael6kfmgl2.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"AFTER DUSK ",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637708/dy9nfbimuo2eukanfbra.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"Shot Blue Marilyn Monroe",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535544066/qslpm9vgs7ah04glc3fp.jpg"
+        },
+        "interest":"Humanity ",
+        "artist":{
+            "name":"Andy Warhol"
+        }
+    },
+    {
+        "title":"The Diagonal of May 25, 1963 (to Constantin Brancusi)",
+        "mood":"Joyful ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535544869/rw5nay4fs98gkmyyeihj.jpg"
+        },
+        "interest":"Tech ",
+        "artist":{
+            "name":"Dan Flavin "
+        }
+    },
+    {
+        "title":"Sleep",
+        "mood":"Meh ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535547377/ddbafmx1jghpkhheqgb6.jpg"
+        },
+        "interest":"Humanity ",
+        "artist":{
+            "name":"Andy Warhol"
+        }
+    },
+    {
+        "title":"\"Monument\" I for V. Tatlin",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535547451/glmjov1jswcit2510kvf.jpg"
+        },
+        "interest":"Tech ",
+        "artist":{
+            "name":"Dan Flavin "
+        }
+    },
+    {
+        "title":"Lisa Lyon ",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535546225/dsjx1iviabgri1zc8faf.jpg"
+        },
+        "interest":"Sexuality ",
+        "artist":{
+            "name":"Robert Mapplethorpe"
+        }
+    },
+    {
+        "title":"Dropping a Han Dynasty Urn",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535546477/wbfnqnsm8kzxgfeqhnux.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Ai Wei Wei"
+        }
+    },
+    {
+        "title":"BLIZZARD",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637804/gv2trzigx2ahiainau55.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"CLASS PICTURE ",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535638004/chyripvpcsl7wswyhaop.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"GRAVEDIGGERS",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535638072/vmfokve1rclufpfon7fa.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"greenhouse",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535638193/f8qf4eqhamrrjfwypbx0.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"Midnight Kiss 2",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535638298/tuufwbvmth6auwjyzuce.jpg"
+        },
+        "interest":"Sexuality",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"Unwelcome Intervention ",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535546832/zoiqyvg1xt49qnw9vt17.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Banksy"
+        }
+    },
+    {
+        "title":"MOLTING",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535638360/ufoogmw0bwvnhhhhboya.jpg"
+        },
+        "interest":"Nature",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"MORNING AFTER ",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535638668/w0xbg5tmd2avaf0l857y.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"BLACK HOUSE",
+        "mood":"Wild",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535636874/iwiy9yb0ysi0s8bpnxvo.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"Napalm Girl",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535547261/ljryna2vlo499gnimbba.jpg"
+        },
+        "interest":"Politics",
+        "artist":{
+            "name":"Banksy"
+        }
+    },
+    {
+        "title":"SMOKE SIGNAL ",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535636946/rl0f2gvqzjxg6enelfhb.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"CEMETERY ",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637000/vjampzxmoucck95ldb8d.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"SIAMESE TWINS",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637115/ucyg0owmrlvbvfyad7nh.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"PIÑATA",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637233/u2g4vbahfrg8fwkrxcrq.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"Library ",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535637279/tj6bkgzjw4c4w8ctlajk.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"By Lantern Light",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535708341/njptduohyossvo07lyk7.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Erin Nicholls"
+        }
+    },
+    {
+        "title":"Melbourne Street Signs",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535709306/pf22nxrwcp19ge8bkmpf.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Erin Nicholls"
+        }
+    },
+    {
+        "title":"Populations",
+        "mood":"Melancholy",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535711569/c7afrnnnwbvokvdtua1x.jpg"
+        },
+        "interest":"Tech",
+        "artist":{
+            "name":"Jonathan Zawada"
+        }
+    },
+    {
+        "title":"Money Problems",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535711647/h3nmf2ynkbb2pzbn3aly.jpg"
+        },
+        "interest":"Tech",
+        "artist":{
+            "name":"Jonathan Zawada"
+        }
+    },
+    {
+        "title":"TRU$T FUN!",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535712207/mfomkykrp37hypkkskuc.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Jonathan Zawada"
+        }
+    },
+    {
+        "title":"WINDOW WASHERS",
+        "mood":"Humorous",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1535718625/swhgjgx19te3ptr0h5aa.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Anthony Goicolea"
+        }
+    },
+    {
+        "title":"Studies of Hands ",
+        "mood":"Melancholy",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536157773/n6wchplsxkxgbsr05lv2.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Alexander Maw"
+        }
+    },
+    {
+        "title":"Memento Mori",
+        "mood":"Poetic",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536157936/rx10vzwvjauhd5fiecni.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Alexander Maw"
+        }
+    },
+    {
+        "title":"The shadow is mine",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536159611/mfhszswswmrlkbonloib.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Sam Lock"
+        }
+    },
+    {
+        "title":"Falling from me",
+        "mood":"Joyful",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536160792/gwcg3wojb0fs00novcpz.jpg"
+        },
+        "interest":"Death",
+        "artist":{
+            "name":"Sam Lock"
+        }
+    },
+    {
+        "title":"A Problem Is a Body of Water",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536161009/mmrdf5l5y0ye0sh96cd3.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Maya Brodsky"
+        }
+    },
+    {
+        "title":"Forever Taking Leave",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536161124/mdcjnru24rv13nu61kd3.jpg"
+        },
+        "interest":"Humanity",
+        "artist":{
+            "name":"Maya Brodsky"
+        }
+    },
+    {
+        "title":"test",
+        "mood":"Melancholy ",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536161894/ezdzfnmpibjqokddyb1t.gif"
+        },
+        "interest":"Tech",
+        "artist":{
+            "name":"Sam Lock"
+        }
+    },
+    {
+        "title":"Strata #3",
+        "mood":"Meh",
+        "image":{
+            "url":"http://res.cloudinary.com/ginnywhx/image/upload/v1536318604/goddcofvuocjldt3i4qu.gif"
+        },
+        "interest":"Tech",
+        "artist":{
+            "name":"Davide Quayola"
+        }
+    }
+]

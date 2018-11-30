@@ -8,6 +8,12 @@
 
 import Foundation
 
-struct ResponseData: Decodable {
+//note: I have all the items in the json put into one "artwork" array of items. It's not like this in the live API so when we make the URL call, this will need to be accounted for.
+
+struct ResponseData: Codable {
     var artwork: [Artwork]
+    
+    enum CodingKeys: String, CodingKey {
+      case artwork
+    }
 }

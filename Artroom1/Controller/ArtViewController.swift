@@ -27,9 +27,31 @@ class ArtViewController: UIViewController {
    
     func setCurrentArtwork(_ artwork: Artwork) {
         self.artResults.text = artwork.title
-        self.artImage.image = UIImage (named: artwork.image)
+        loadImageFromURL(artwork.image.url)
+        // call the func?    self.artImage.image = UIImage (named: artwork.image)
+        // plug in network request data here, save late, datatask first
         renderedForKeeping = artwork
     }
+    
+    func loadImageFromURL(_ givenurl: String) {
+        guard let url = URL(string: givenurl) else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { (place, response, errpr) in
+            guard let place = place else {
+                print("location went wrong")
+                return
+            }
+            let image = UIImage(data: place)
+            DispatchQueue.main.async {
+                self.artImage.image = image
+            }
+        }
+        
+        task.resume()
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

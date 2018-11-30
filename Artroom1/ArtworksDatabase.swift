@@ -19,12 +19,13 @@ public class ArtworksDatabase {
         arrayOfArtworks = loadJson("data")
     }
 }
+//All I need to do (later) is modify this func to access my new API and not a local file
 
 private func loadJson(_ fileName: String) -> [Artwork] {
     let path = Bundle.main.path(forResource: "data", ofType: "json")!
     let data = try! Data(contentsOf: URL(fileURLWithPath: path))
     let decoder = JSONDecoder()
-    let jsonData = try! decoder.decode(ResponseData.self, from: data)
-    return jsonData.artwork
+    let jsonData = try! decoder.decode([Artwork].self, from: data)
+    return jsonData
 }
 
