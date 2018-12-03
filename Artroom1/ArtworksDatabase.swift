@@ -25,14 +25,11 @@ public class ArtworksDatabase {
                 self.arrayOfArtworks = artworks
                 completionHandler()
             } else {
-                print(error)
-                
+                //TODO: handle this error
             }
         }
     }
-    
 }
-
 
 // Decode this right away into types?
 private func loadJson(completionHandler: @escaping ([Artwork]?,Error?) -> Void) {
@@ -52,25 +49,3 @@ private func loadJson(completionHandler: @escaping ([Artwork]?,Error?) -> Void) 
     }
     task.resume()
 }
-
-
-
-// not using this
-// removed: completionHandler: @escaping ([Artwork]?, Error?) -> Void
-//private func requestArtroomJson() -> [Artwork] {
-//    let endpoint = URL(string:"https://www.artroom.fun/artworks.json")
-//    let task = URLSession.shared.dataTask(with: endpoint!) { (data, response, error) in
-//        guard let data = data else {
-////            completionHandler(nil, error)
-//            return
-//        }
-//        let decoder = JSONDecoder()
-//        let artData = try!
-//            decoder.decode([Artwork].self, from: data)
-////        completionHandler(artData, nil)
-//    }
-//        return artData
-//
-//    task.resume()
-//
-//}

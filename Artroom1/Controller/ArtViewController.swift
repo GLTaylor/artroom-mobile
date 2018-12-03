@@ -27,9 +27,8 @@ class ArtViewController: UIViewController {
    
     func setCurrentArtwork(_ artwork: Artwork) {
         self.artResults.text = artwork.title
+        // instead of assigning an outlet like above, here I'm calling a function to do that - which assigns artImage and returns nothing
         loadImageFromURL(artwork.image.url)
-        // call the func?    self.artImage.image = UIImage (named: artwork.image)
-        // plug in network request data here, save late, datatask first
         renderedForKeeping = artwork
     }
     
@@ -50,8 +49,6 @@ class ArtViewController: UIViewController {
         
         task.resume()
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,7 +135,5 @@ class ArtViewController: UIViewController {
             seeSavedArtButton?.isEnabled = true
         }
     }
-    
-
 }
 

@@ -12,4 +12,3 @@ struct ArtAttributes: Equatable, Codable {
     var mood: Mood
     var interest: Interest
 }
-

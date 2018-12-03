@@ -23,17 +23,20 @@ import UIKit
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        return 4
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch (row, component) {
+            // these need to go in order based on mood and interest structs, otherwise the data will be wonky (ie, if I set "death" to 3,1 I'd still get images for sexuality because that is the fourth interest in the struct)
         case (0, 0): return "joyful"
         case (1, 0): return "melancholy"
         case (0, 1): return "tech"
         case (1, 1): return "nature"
         case (2, 0): return "meh"
         case (2, 1): return "humanity"
+        case (3, 0): return "wild"
+        case (3, 1): return "sexuality"
             
         default: return "whoops"
         }
@@ -63,7 +66,6 @@ import UIKit
 
         controller.chosenArtAttributes = choosingAttributes()
         self.navigationController?.pushViewController(controller, animated: true)
-//        present(controller, animated: true, completion: nil)
     }
     
     
@@ -75,7 +77,5 @@ import UIKit
         let art = ArtAttributes(mood: mood, interest: interest)
         return art
     }
-
-
 }
 

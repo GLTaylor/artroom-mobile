@@ -14,10 +14,8 @@ class SavedArtViewController: UIViewController {
     var arrayOfSavedArt: [Artwork]?
     var savedArtImage: UIImageView!
 
-    
+    //Displays carousel of artworks - for now, images only
     @IBOutlet weak var savedArt: iCarousel?
-//    @IBOutlet weak var savedArtTitle: UILabel?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,12 +67,6 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
                 self.savedArtImage.image = image
             }
         }
-        
         task.resume()
     }
-    
-    
-        
-    }
-    
-
+}

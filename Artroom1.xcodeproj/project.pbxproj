@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		124A7932218A0B4A0057FECB /* ArtworksDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */; };
-		124A7934218B51250057FECB /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 124A7933218B51250057FECB /* data.json */; };
 		1286EC7721775F8E00CBB491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286EC7621775F8E00CBB491 /* AppDelegate.swift */; };
 		1286EC7921775F8E00CBB491 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286EC7821775F8E00CBB491 /* HomeViewController.swift */; };
 		1286EC7C21775F8E00CBB491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1286EC7A21775F8E00CBB491 /* Main.storyboard */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksDatabase.swift; sourceTree = "<group>"; };
-		124A7933218B51250057FECB /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		1286EC7321775F8E00CBB491 /* Artroom1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artroom1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1286EC7621775F8E00CBB491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1286EC7821775F8E00CBB491 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				129FE41F21AFDD4B0027B11F /* View */,
 				129FE41E21AFDCFF0027B11F /* Model */,
 				124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */,
-				124A7933218B51250057FECB /* data.json */,
 				1286EC7D21775F9100CBB491 /* Assets.xcassets */,
 				12E8FF58219EBFA1007601B1 /* Toast.swift */,
 				129FE3F421A72E2B0027B11F /* iCarousel.h */,
@@ -187,7 +184,6 @@
 				1286EC8121775F9100CBB491 /* LaunchScreen.storyboard in Resources */,
 				1286EC7E21775F9100CBB491 /* Assets.xcassets in Resources */,
 				1286EC7C21775F8E00CBB491 /* Main.storyboard in Resources */,
-				124A7934218B51250057FECB /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
