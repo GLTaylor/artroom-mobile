@@ -59,7 +59,7 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
         guard let url = URL(string: givenurl) else {
             return
         }
-        let task = URLSession.shared.dataTask(with: url) { (place, response, errpr) in
+        let task = URLSession.shared.dataTask(with: url) { (place, response, error) in
             guard let place = place else {
                 print("location went wrong")
                 return

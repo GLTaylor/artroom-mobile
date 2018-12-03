@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YWR-Bt-040">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rF3-mX-fxY">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -89,10 +89,38 @@
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="116.57608695652175"/>
         </scene>
+        <!--Load Data View Controller-->
+        <scene sceneID="c5a-ij-yx7">
+            <objects>
+                <viewController storyboardIdentifier="LoadDataViewController" id="rF3-mX-fxY" customClass="LoadDataViewController" customModule="Artroom1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wIq-yw-7bS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vAc-jG-V0U">
+                                <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.56821581880000005" green="0.33401580450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vAc-jG-V0U" firstAttribute="centerX" secondItem="wIq-yw-7bS" secondAttribute="centerX" id="aZX-qO-1Lt"/>
+                            <constraint firstItem="vAc-jG-V0U" firstAttribute="centerY" secondItem="wIq-yw-7bS" secondAttribute="centerY" id="ri0-oe-5a7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vwk-0f-UmC"/>
+                    </view>
+                    <connections>
+                        <segue destination="YWR-Bt-040" kind="presentation" identifier="Loaded" id="Yg4-AJ-gWW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeR-1z-2bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1359" y="112"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="wbs-tg-Ldd">
             <objects>
-                <navigationController id="YWR-Bt-040" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="crossDissolve" id="YWR-Bt-040" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RbC-Cq-Tg3">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

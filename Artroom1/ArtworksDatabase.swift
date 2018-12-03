@@ -13,19 +13,64 @@ import UIKit
 
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
-    let arrayOfArtworks: [Artwork]
+    var arrayOfArtworks: [Artwork]
     
     private init() {
-        arrayOfArtworks = loadJson("data")
+        arrayOfArtworks = []
     }
+    
+    func load(completionHandler: @escaping () -> Void ) {
+        loadJson { (artworks, error) in
+            if let artworks = artworks {
+                self.arrayOfArtworks = artworks
+                completionHandler()
+            } else {
+                print(error)
+                
+            }
+        }
+    }
+    
 }
-//All I need to do (later) is modify this func to access my new API and not a local file
 
-private func loadJson(_ fileName: String) -> [Artwork] {
-    let path = Bundle.main.path(forResource: "data", ofType: "json")!
-    let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+
+// Decode this right away into types?
+private func loadJson(completionHandler: @escaping ([Artwork]?,Error?) -> Void) {
+    let path = URL(string:"https://www.artroom.fun/artworks.json")
+    let task = URLSession.shared.dataTask(with: path!) { (data, response, error) in
+        guard let data = data else {
+            completionHandler(nil, error)
+            return
+        }
     let decoder = JSONDecoder()
-    let jsonData = try! decoder.decode([Artwork].self, from: data)
-    return jsonData
+        do {
+            let artworks = try decoder.decode([Artwork].self, from: data)
+            completionHandler(artworks, nil)
+        } catch {
+            completionHandler(nil, error)
+        }
+    }
+    task.resume()
 }
 
+
+
+// not using this
+// removed: completionHandler: @escaping ([Artwork]?, Error?) -> Void
+//private func requestArtroomJson() -> [Artwork] {
+//    let endpoint = URL(string:"https://www.artroom.fun/artworks.json")
+//    let task = URLSession.shared.dataTask(with: endpoint!) { (data, response, error) in
+//        guard let data = data else {
+////            completionHandler(nil, error)
+//            return
+//        }
+//        let decoder = JSONDecoder()
+//        let artData = try!
+//            decoder.decode([Artwork].self, from: data)
+////        completionHandler(artData, nil)
+//    }
+//        return artData
+//
+//    task.resume()
+//
+//}
