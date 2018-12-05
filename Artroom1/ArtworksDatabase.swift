@@ -25,6 +25,7 @@ public class ArtworksDatabase {
                 self.arrayOfArtworks = artworks
                 completionHandler()
             } else {
+                print(error.debugDescription)
                 //TODO: handle this error
             }
         }

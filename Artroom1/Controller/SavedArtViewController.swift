@@ -45,6 +45,9 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
         if view == nil {
             savedArtImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
             savedArtImage.contentMode = .scaleAspectFit
+//            let imgOriginal = savedArtImage!.image?.withRenderingMode(.alwaysTemplate)
+//            let borderImage = imgOriginal.withBo imageWithBorder(width: 2, color: UIColor.blue)
+//            imageView.image = borderImage
         } else {
             savedArtImage = view as? UIImageView
         }

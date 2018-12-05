@@ -66,7 +66,7 @@ class ArtViewController: UIViewController {
      }
     
      func renderFresh() {
-        
+         enablesSavedArtsButtonIfNeeded()
         if selection.isEmpty {
             self.artResults.text = "No more art matches"
             self.artImage.image = UIImage (named: "Empty Frame")
@@ -96,7 +96,7 @@ class ArtViewController: UIViewController {
                     usersLikedArtworks.append(renderedForKeeping!)
                     print(usersLikedArtworks)
                     Toast.show(message: "Saved!", controller: self)
-                    
+
                     selection.remove(at: selectedIndex)
                     renderFresh()
                 } else {
@@ -121,10 +121,10 @@ class ArtViewController: UIViewController {
 
 
     private func renderNextArt() {
-        enablesSavedArtsButtonIfNeeded()
         if let randomArtwork = selection.randomElement(), let index = selection.firstIndex(of: randomArtwork)  {
             selectedIndex = index
             setCurrentArtwork(randomArtwork)
+//            enablesSavedArtsButtonIfNeeded()
         }
     }
     
