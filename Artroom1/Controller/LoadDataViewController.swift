@@ -17,19 +17,31 @@ class LoadDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadButton?.isHidden = true
-        ArtworksDatabase.shared.load(completionHandler: {
-            self.performSegue(withIdentifier: "Loaded", sender: self)
+        ArtworksDatabase.shared.load(completionHandler: {(artworks, error)  in
+            if artworks != nil {
+                self.performSegue(withIdentifier: "Loaded", sender: self)
+            } else {
+                self.delayMessage?.text = "Error: \(error ?? "another error" as! Error)"
+                self.reloadButton?.isHidden = false
+            }
         })
-        // If the page takes longer than 5 seconds to load, something likely went wrong and the option to try loading again will appear
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(delay)) {
-            self.delayMessage?.text = "This is taking a while, sorry"
-            self.reloadButton?.isHidden = false
-        }
+        // Below only waits a certain amount of time and doesn't recognize errors per se, so I won't use it
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(delay)) {
+//            self.delayMessage?.text = "This is taking a while, sorry"
+//            self.reloadButton?.isHidden = false
+//        }
+
     }
     
+    // I am not sure this works because it doesn't make it to the else a second time.
     @IBAction func loadAgain() {
-        ArtworksDatabase.shared.load(completionHandler: {
-            self.performSegue(withIdentifier: "Loaded", sender: self)
+        ArtworksDatabase.shared.load(completionHandler: {(artworks, error)  in
+            if artworks != nil {
+                self.performSegue(withIdentifier: "Loaded", sender: self)
+            } else {
+                self.delayMessage?.text = "Error: \(error?.localizedDescription ?? "another error")"
+                self.reloadButton?.isHidden = false
+            }
         })
         viewDidLoad()
     }

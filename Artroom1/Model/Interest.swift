@@ -29,7 +29,7 @@ enum Interest: Int, Codable {
         case "politics": self = .politics
         case "death": self = .death
         default: throw
-            DecodingError.dataCorrupted(DecodingError.Context.init(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate interest should be \(string) "))
+            DecodingError.dataCorrupted(DecodingError.Context.init(codingPath: container.codingPath, debugDescription: "Unknown interest string found: \(string) "))
         }
     }
 }

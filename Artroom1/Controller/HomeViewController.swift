@@ -48,7 +48,7 @@ import UIKit
     }
     
     func assignbackgrounds(){
-        let background = UIImage(named: "polke_faded")
+        let background = UIImage(named: "Artwall")
         
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)

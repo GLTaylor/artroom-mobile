@@ -18,15 +18,18 @@ public class ArtworksDatabase {
     private init() {
         arrayOfArtworks = []
     }
-    
-    func load(completionHandler: @escaping () -> Void ) {
+    // added error and [Artwork]
+    func load(completionHandler: @escaping ([Artwork]?, Error?) -> Void ) {
         loadJson { (artworks, error) in
             if let artworks = artworks {
                 self.arrayOfArtworks = artworks
-                completionHandler()
+                completionHandler(artworks, nil)
             } else {
                 print(error.debugDescription)
+                completionHandler(nil, error)
                 //TODO: handle this error
+                //Trigger a popup on LoadDataVC?
+               
             }
         }
     }

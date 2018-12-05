@@ -29,7 +29,7 @@ enum Mood: Int, Codable {
         case "poetic": self = .poetic
         case "humorous": self = .humorous
         default: throw
-            DecodingError.dataCorrupted(DecodingError.Context.init(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate mood should be \(string)"))
+            DecodingError.dataCorrupted(DecodingError.Context.init(codingPath: container.codingPath, debugDescription: "Unknown mood string found: \(string)"))
         }
     }
 }

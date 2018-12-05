@@ -13,12 +13,13 @@ class SavedArtViewController: UIViewController {
     
     var arrayOfSavedArt: [Artwork]?
     var savedArtImage: UIImageView!
-
     //Displays carousel of artworks - for now, images only
     @IBOutlet weak var savedArt: iCarousel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        arrayOfSavedArt = arrayOfSavedArt!.uniqueElements
+        
         savedArt!.type = .invertedCylinder
         savedArt!.contentMode = .scaleAspectFit
         
@@ -38,6 +39,7 @@ class SavedArtViewController: UIViewController {
     
 extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
     func numberOfItems(in carousel: iCarousel) -> Int {
+        arrayOfSavedArt = arrayOfSavedArt!.uniqueElements
         return arrayOfSavedArt!.count
     }
     
@@ -45,14 +47,16 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
         if view == nil {
             savedArtImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
             savedArtImage.contentMode = .scaleAspectFit
-//            let imgOriginal = savedArtImage!.image?.withRenderingMode(.alwaysTemplate)
-//            let borderImage = imgOriginal.withBo imageWithBorder(width: 2, color: UIColor.blue)
-//            imageView.image = borderImage
+            savedArtImage.layer.borderWidth = 5.50
+            
         } else {
             savedArtImage = view as? UIImageView
         }
+        arrayOfSavedArt = arrayOfSavedArt!.uniqueElements
         let nameOfImage = arrayOfSavedArt?[index].image.url
         loadImageFromURL(nameOfImage!)
+    
+        
         return savedArtImage
       }
     
@@ -68,8 +72,20 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
             let image = UIImage(data: place)
             DispatchQueue.main.async {
                 self.savedArtImage.image = image
+
             }
         }
         task.resume()
+    }
+}
+public extension Sequence where Element: Equatable {
+    var uniqueElements: [Element] {
+        return self.reduce(into: []) {
+            uniqueElements, element in
+            
+            if !uniqueElements.contains(element) {
+                uniqueElements.append(element)
+            }
+        }
     }
 }
