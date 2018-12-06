@@ -39,16 +39,18 @@ public class ArtworksDatabase {
 private func loadJson(completionHandler: @escaping ([Artwork]?,Error?) -> Void) {
     let path = URL(string:"https://www.artroom.fun/artworks.json")
     let task = URLSession.shared.dataTask(with: path!) { (data, response, error) in
-        guard let data = data else {
-            completionHandler(nil, error)
-            return
-        }
-    let decoder = JSONDecoder()
-        do {
-            let artworks = try decoder.decode([Artwork].self, from: data)
-            completionHandler(artworks, nil)
-        } catch {
-            completionHandler(nil, error)
+        DispatchQueue.main.async {
+            guard let data = data else {
+                completionHandler(nil, error)
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let artworks = try decoder.decode([Artwork].self, from: data)
+                completionHandler(artworks, nil)
+            } catch {
+                completionHandler(nil, error)
+            }
         }
     }
     task.resume()

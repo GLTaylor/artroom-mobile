@@ -8,7 +8,6 @@
 
 import UIKit
 
-    
    class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var chooseSelf: UIPickerView!
