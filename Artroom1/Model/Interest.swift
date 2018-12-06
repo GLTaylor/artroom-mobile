@@ -8,7 +8,11 @@
 
 import Foundation
 
-enum Interest: Int, Codable {
+enum Interest: Int, Comparable, Codable {
+    static func < (lhs: Interest, rhs: Interest) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+    
     case tech
     case nature
     case humanity

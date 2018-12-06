@@ -8,7 +8,11 @@
 
 import Foundation
 
-enum Mood: Int, Codable {
+enum Mood: Int, Comparable, Codable {
+    static func < (lhs: Mood, rhs: Mood) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+    
     case joyful 
     case melancholy
     case meh
