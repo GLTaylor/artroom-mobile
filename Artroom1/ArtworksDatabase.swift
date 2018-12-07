@@ -27,15 +27,11 @@ public class ArtworksDatabase {
             } else {
                 print(error.debugDescription)
                 completionHandler(nil, error)
-                //TODO: handle this error
-                //Trigger a popup on LoadDataVC?
-               
             }
         }
     }
 }
 
-// Decode this right away into types?
 private func loadJson(completionHandler: @escaping ([Artwork]?,Error?) -> Void) {
     let path = URL(string:"https://www.artroom.fun/artworks.json")
     let task = URLSession.shared.dataTask(with: path!) { (data, response, error) in
