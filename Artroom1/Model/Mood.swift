@@ -12,19 +12,19 @@ enum Mood: Int, Comparable, Codable {
     static func < (lhs: Mood, rhs: Mood) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }
-    
-    case joyful 
+
+    case joyful
     case melancholy
     case meh
     case wild
     case poetic
     case humorous
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         var string = try container.decode(String.self)
         string = string.lowercased().trimmingCharacters(in: .whitespaces)
-        
+
         switch string {
         case "joyful": self = .joyful
         case "melancholy": self = .melancholy
@@ -33,9 +33,7 @@ enum Mood: Int, Comparable, Codable {
         case "poetic": self = .poetic
         case "humorous": self = .humorous
         default: throw
-            DecodingError.dataCorrupted(DecodingError.Context.init(codingPath: container.codingPath, debugDescription: "Unknown mood string found: \(string)"))
+            DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown mood string found: \(string)"))
         }
     }
 }
-
-

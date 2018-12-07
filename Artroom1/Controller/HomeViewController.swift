@@ -8,94 +8,89 @@
 
 import UIKit
 
-   class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    @IBOutlet weak var chooseSelf: UIPickerView!
-    @IBOutlet weak var welcomeSign: UILabel!
-    @IBOutlet weak var welcomeMessage: UILabel!
+class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet var chooseSelf: UIPickerView!
+    @IBOutlet var welcomeSign: UILabel!
+    @IBOutlet var welcomeMessage: UILabel!
     var moodTitles: [String]!
     var interestTitles: [String]!
-    
     var chosenThings: Int!
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let artworks = ArtworksDatabase.shared.arrayOfArtworks
         let moods = Set(artworks.map { (artwork) -> Mood in
-            return artwork.attributes.mood
+            artwork.attributes.mood
         })
             .sorted()
             .map(moodToString)
-        
+
         moodTitles = moods
-        
+
         let interests = Set(artworks.map { (artwork) -> Interest in
-            return artwork.attributes.interest
+            artwork.attributes.interest
         })
             .sorted()
             .map(interestToString)
-        
+
         interestTitles = interests
     }
-    
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+
+    func numberOfComponents(in _: UIPickerView) -> Int {
         return 2
     }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+
+    func pickerView(_: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
             return moodTitles.count
         } else {
             return interestTitles.count
         }
-        
     }
 
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
             return moodTitles[row]
         } else {
             return interestTitles[row]
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackgrounds()
     }
-    
-    func assignbackgrounds(){
+
+    func assignbackgrounds() {
         let background = UIImage(named: "Artwall")
-        
-        var imageView : UIImageView!
+
+        var imageView: UIImageView!
         imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.contentMode = UIView.ContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
         view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
+        view.sendSubviewToBack(imageView)
     }
-    
+
     @IBAction func seeArt() {
         let controller: ArtViewController
         controller = storyboard?.instantiateViewController(withIdentifier: "ArtViewController") as! ArtViewController
 
         controller.chosenArtAttributes = choosingAttributes()
-        self.navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
-    
-    
+
     private func choosingAttributes() -> ArtAttributes {
-        let moodIndex =  chooseSelf.selectedRow(inComponent: 0)
+        let moodIndex = chooseSelf.selectedRow(inComponent: 0)
         let interestIndex = chooseSelf.selectedRow(inComponent: 1)
         let mood = Mood(rawValue: moodIndex)!
         let interest = Interest(rawValue: interestIndex)!
         let art = ArtAttributes(mood: mood, interest: interest)
         return art
     }
-    
+
     func moodToString(_ mood: Mood) -> String {
         switch mood {
         case Mood.joyful:
@@ -112,7 +107,7 @@ import UIKit
             return "humorous"
         }
     }
-    
+
     func interestToString(_ interest: Interest) -> String {
         switch interest {
         case .death:
@@ -130,4 +125,3 @@ import UIKit
         }
     }
 }
-

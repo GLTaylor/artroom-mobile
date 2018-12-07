@@ -16,7 +16,7 @@ class LoadDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadButton?.isHidden = true
-        ArtworksDatabase.shared.load(completionHandler: {(artworks, error)  in
+        ArtworksDatabase.shared.load(completionHandler: { artworks, error in
             if artworks != nil {
                 self.performSegue(withIdentifier: "Loaded", sender: self)
             } else {
@@ -24,11 +24,10 @@ class LoadDataViewController: UIViewController {
                 self.reloadButton?.isHidden = false
             }
         })
-
     }
-    
+
     @IBAction func loadAgain() {
-        ArtworksDatabase.shared.load(completionHandler: {(artworks, error)  in
+        ArtworksDatabase.shared.load(completionHandler: { artworks, error in
             if artworks != nil {
                 self.performSegue(withIdentifier: "Loaded", sender: self)
             } else {
@@ -38,6 +37,4 @@ class LoadDataViewController: UIViewController {
         })
         viewDidLoad()
     }
-    
 }
-

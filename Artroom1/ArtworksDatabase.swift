@@ -14,13 +14,14 @@ import UIKit
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
     var arrayOfArtworks: [Artwork]
-    
+
     private init() {
         arrayOfArtworks = []
     }
+
     // added error and [Artwork]
-    func load(completionHandler: @escaping ([Artwork]?, Error?) -> Void ) {
-        loadJson { (artworks, error) in
+    func load(completionHandler: @escaping ([Artwork]?, Error?) -> Void) {
+        loadJson { artworks, error in
             if let artworks = artworks {
                 self.arrayOfArtworks = artworks
                 completionHandler(artworks, nil)
@@ -32,9 +33,9 @@ public class ArtworksDatabase {
     }
 }
 
-private func loadJson(completionHandler: @escaping ([Artwork]?,Error?) -> Void) {
-    let path = URL(string:"https://www.artroom.fun/artworks.json")
-    let task = URLSession.shared.dataTask(with: path!) { (data, response, error) in
+private func loadJson(completionHandler: @escaping ([Artwork]?, Error?) -> Void) {
+    let path = URL(string: "https://www.artroom.fun/artworks.json")
+    let task = URLSession.shared.dataTask(with: path!) { data, _, error in
         DispatchQueue.main.async {
             guard let data = data else {
                 completionHandler(nil, error)

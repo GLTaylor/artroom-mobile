@@ -12,31 +12,30 @@ import UIKit
 var usersLikedArtworks: [Artwork] = []
 
 class ArtViewController: UIViewController {
-        
     var renderedForKeeping: Artwork?
     var chosenArtAttributes: ArtAttributes!
 
-    @IBOutlet weak var artResults: UILabel!
-    @IBOutlet weak var artImage: UIImageView!
-    
+    @IBOutlet var artResults: UILabel!
+    @IBOutlet var artImage: UIImageView!
+
     private var selection: [Artwork] = []
     private var animator: UIDynamicAnimator!
     private var snapping: UISnapBehavior!
-    
+
     var selectedIndex: Int!
-   
+
     func setCurrentArtwork(_ artwork: Artwork) {
-        self.artResults.text = artwork.title
+        artResults.text = artwork.title
         // instead of assigning an outlet like above, here I'm calling a function to do that - which assigns artImage and returns nothing
         loadImageFromURL(artwork.image.url)
         renderedForKeeping = artwork
     }
-    
+
     func loadImageFromURL(_ givenurl: String) {
         guard let url = URL(string: givenurl) else {
             return
         }
-        let task = URLSession.shared.dataTask(with: url) { (place, response, errpr) in
+        let task = URLSession.shared.dataTask(with: url) { place, _, _ in
             guard let place = place else {
                 print("location went wrong")
                 return
@@ -46,45 +45,45 @@ class ArtViewController: UIViewController {
                 self.artImage.image = image
             }
         }
-        
+
         task.resume()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         animator = UIDynamicAnimator(referenceView: view)
-        snapping = UISnapBehavior(item: artImage, snapTo: CGPoint(x: view.center.x, y: (view.center.y - 60) ))
+        snapping = UISnapBehavior(item: artImage, snapTo: CGPoint(x: view.center.x, y: (view.center.y - 60)))
         animator.addBehavior(snapping)
         selection = ArtworksDatabase.shared.arrayOfArtworks.filter { (artwork: Artwork) -> Bool in
             artwork.attributes == chosenArtAttributes
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         renderFresh()
-     }
-    
-     func renderFresh() {
-         enablesSavedArtsButtonIfNeeded()
+    }
+
+    func renderFresh() {
+        enablesSavedArtsButtonIfNeeded()
         if selection.isEmpty {
-            self.artResults.text = "No more art matches"
-            self.artImage.image = UIImage (named: "Empty Frame")
+            artResults.text = "No more art matches"
+            artImage.image = UIImage(named: "Empty Frame")
 
         } else {
             renderNextArt()
         }
     }
-    
-    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
-        let translation = recognizer.translation(in: self.view)
+
+    @IBAction func handlePan(recognizer: UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: view)
         if let view = recognizer.view {
-            view.center = CGPoint(x:view.center.x + translation.x,
-                                  y:view.center.y + translation.y)
+            view.center = CGPoint(x: view.center.x + translation.x,
+                                  y: view.center.y + translation.y)
         }
-        recognizer.setTranslation(CGPoint.zero, in: self.view)
-        
-        if  self.artResults.text == "No more art matches" {
+        recognizer.setTranslation(CGPoint.zero, in: view)
+
+        if artResults.text == "No more art matches" {
             recognizer.isEnabled = false
         } else {
             switch recognizer.state {
@@ -92,7 +91,7 @@ class ArtViewController: UIViewController {
                 animator.removeBehavior(snapping)
             case .ended, .cancelled, .failed:
                 animator.addBehavior(snapping)
-                if(artImage.center.x > view.center.x) {
+                if artImage.center.x > view.center.x {
                     usersLikedArtworks.append(renderedForKeeping!)
                     print(usersLikedArtworks)
                     Toast.show(message: "Saved!", controller: self)
@@ -102,32 +101,31 @@ class ArtViewController: UIViewController {
                 } else {
                     selection.remove(at: selectedIndex)
                     renderFresh()
-                    NSLog("gesture went left");
-                    }
+                    NSLog("gesture went left")
+                }
             case .possible:
                 break
-                }
             }
         }
+    }
 
-    @IBOutlet var seeSavedArtButton: UIButton? 
+    @IBOutlet var seeSavedArtButton: UIButton?
     @IBAction func seeSavedArt() {
         let controller: SavedArtViewController
         controller = storyboard?.instantiateViewController(withIdentifier: "SavedArtViewController") as! SavedArtViewController
-    
+
         controller.arrayOfSavedArt = usersLikedArtworks
-        self.navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
 
-
     private func renderNextArt() {
-        if let randomArtwork = selection.randomElement(), let index = selection.firstIndex(of: randomArtwork)  {
+        if let randomArtwork = selection.randomElement(), let index = selection.firstIndex(of: randomArtwork) {
             selectedIndex = index
             setCurrentArtwork(randomArtwork)
 //            enablesSavedArtsButtonIfNeeded()
         }
     }
-    
+
     func enablesSavedArtsButtonIfNeeded() {
         if usersLikedArtworks == [] {
             seeSavedArtButton?.isEnabled = false
@@ -136,4 +134,3 @@ class ArtViewController: UIViewController {
         }
     }
 }
-
