@@ -15,11 +15,11 @@ enum Interest: Int, Codable {
     case sexuality
     case politics
     case death
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let string = try container.decode(String.self)
-        
+
         switch string {
         case "Tech ", "Tech": self = .tech
         case "Nature", "Nature ": self = .nature
@@ -28,7 +28,7 @@ enum Interest: Int, Codable {
         case "Politics", "politics", "Politics ": self = .politics
         case "Death", "death", "Death ": self = .death
         default: throw
-            DecodingError.dataCorrupted(DecodingError.Context.init(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate interest should be \(string) "))
+            DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate interest should be \(string) "))
         }
     }
 }

@@ -8,27 +8,24 @@
 
 import UIKit
 
-    
-   class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    @IBOutlet weak var chooseSelf: UIPickerView!
-    @IBOutlet weak var welcomeSign: UILabel!
-    @IBOutlet weak var welcomeMessage: UILabel!
-    
+class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet var chooseSelf: UIPickerView!
+    @IBOutlet var welcomeSign: UILabel!
+    @IBOutlet var welcomeMessage: UILabel!
+
     var chosenThings: Int!
-    
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+
+    func numberOfComponents(in _: UIPickerView) -> Int {
         return 2
     }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+
+    func pickerView(_: UIPickerView, numberOfRowsInComponent _: Int) -> Int {
         return 4
     }
 
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch (row, component) {
-            // these need to go in order based on mood and interest structs, otherwise the data will be wonky (ie, if I set "death" to 3,1 I'd still get images for sexuality because that is the fourth interest in the struct)
+        // these need to go in order based on mood and interest structs, otherwise the data will be wonky (ie, if I set "death" to 3,1 I'd still get images for sexuality because that is the fourth interest in the struct)
         case (0, 0): return "joyful"
         case (1, 0): return "melancholy"
         case (0, 1): return "tech"
@@ -37,40 +34,39 @@ import UIKit
         case (2, 1): return "humanity"
         case (3, 0): return "wild"
         case (3, 1): return "sexuality"
-            
+
         default: return "whoops"
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackgrounds()
     }
-    
-    func assignbackgrounds(){
+
+    func assignbackgrounds() {
         let background = UIImage(named: "polke_faded")
-        
-        var imageView : UIImageView!
+
+        var imageView: UIImageView!
         imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.contentMode = UIView.ContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
         view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
+        view.sendSubviewToBack(imageView)
     }
-    
+
     @IBAction func seeArt() {
         let controller: ArtViewController
         controller = storyboard?.instantiateViewController(withIdentifier: "ArtViewController") as! ArtViewController
 
         controller.chosenArtAttributes = choosingAttributes()
-        self.navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
-    
-    
+
     private func choosingAttributes() -> ArtAttributes {
-        let moodIndex =  chooseSelf.selectedRow(inComponent: 0)
+        let moodIndex = chooseSelf.selectedRow(inComponent: 0)
         let interestIndex = chooseSelf.selectedRow(inComponent: 1)
         let mood = Mood(rawValue: moodIndex)!
         let interest = Interest(rawValue: interestIndex)!
@@ -78,4 +74,3 @@ import UIKit
         return art
     }
 }
-

@@ -12,8 +12,7 @@ struct Artwork: Equatable, Decodable {
     let title: String
     let image: Image
     let attributes: ArtAttributes
-    
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let mood = try container.decode(Mood.self, forKey: .mood)
@@ -21,9 +20,8 @@ struct Artwork: Equatable, Decodable {
         attributes = ArtAttributes(mood: mood, interest: interest)
         title = try container.decode(String.self, forKey: .title)
         image = try container.decode(Image.self, forKey: .image)
-        
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case title
         case image

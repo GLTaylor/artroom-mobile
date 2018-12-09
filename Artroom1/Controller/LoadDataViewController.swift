@@ -10,12 +10,10 @@ import Foundation
 import UIKit
 
 class LoadDataViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         ArtworksDatabase.shared.load(completionHandler: {
             self.performSegue(withIdentifier: "Loaded", sender: self)
         })
     }
-    
 }

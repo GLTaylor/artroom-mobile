@@ -9,17 +9,17 @@
 import Foundation
 
 enum Mood: Int, Codable {
-    case joyful 
+    case joyful
     case melancholy
     case meh
     case wild
     case poetic
     case humorous
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let string = try container.decode(String.self)
-        
+
         switch string {
         case "Joyful", "Joyful ": self = .joyful
         case "Melancholy ", "Melancholy", "melancholy": self = .melancholy
@@ -28,9 +28,7 @@ enum Mood: Int, Codable {
         case "Poetic", "poetic", "Poetic ": self = .poetic
         case "Humorous", "Humorous ": self = .humorous
         default: throw
-            DecodingError.dataCorrupted(DecodingError.Context.init(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate mood should be \(string)"))
+            DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate mood should be \(string)"))
         }
     }
 }
-
-

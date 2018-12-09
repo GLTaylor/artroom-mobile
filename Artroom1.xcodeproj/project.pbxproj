@@ -113,11 +113,11 @@
 		129FE42021AFDDBC0027B11F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1286EC7821775F8E00CBB491 /* HomeViewController.swift */,
 				1286EC7621775F8E00CBB491 /* AppDelegate.swift */,
+				129FE42121B53F9E0027B11F /* LoadDataViewController.swift */,
+				1286EC7821775F8E00CBB491 /* HomeViewController.swift */,
 				1286ECB12178F34D00CBB491 /* ArtViewController.swift */,
 				129FE3AB21A472200027B11F /* SavedArtViewController.swift */,
-				129FE42121B53F9E0027B11F /* LoadDataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
