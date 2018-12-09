@@ -167,7 +167,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title=" See Saved "/>
                                 <connections>
-                                    <action selector="seeSavedArt" destination="eoJ-1l-058" eventType="touchUpInside" id="a36-D5-kPj"/>
+                                    <segue destination="Ril-Ka-hD5" kind="show" identifier="ShowSaved" id="QlF-Qf-uiU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -190,7 +190,7 @@
                     <connections>
                         <outlet property="artImage" destination="9Rc-3I-unb" id="WdO-p5-NWs"/>
                         <outlet property="artResults" destination="YT0-Zk-IbP" id="GEL-2Y-nTe"/>
-                        <outlet property="seeSavedArtButton" destination="W0U-Pr-MFC" id="LKw-4n-PBo"/>
+                        <outlet property="seeSavedArtButton" destination="W0U-Pr-MFC" id="8S0-pR-66r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4Z-q8-eRA" userLabel="First Responder" sceneMemberID="firstResponder"/>

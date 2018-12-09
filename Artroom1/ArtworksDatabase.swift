@@ -14,8 +14,7 @@ import UIKit
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
     private(set) var arrayOfArtworks: [Artwork] // Because I only want to mutate it here but read it from the outside
-    private(set) var dictOfImages: [String : UIImage]
-
+    private(set) var dictOfImages: [String: UIImage]
 
     private init() {
         arrayOfArtworks = []
@@ -26,12 +25,12 @@ public class ArtworksDatabase {
         loadJson { artworks, _ in
             if let artworks = artworks {
                 self.arrayOfArtworks = artworks
-                // In Progress: The following is supposed to create a dictionary of images, to get them ready for use later instead of making new network requests. 
-                artworks.forEach({ (artwork) in
+                // In Progress: The following is supposed to create a dictionary of images, to get them ready for use later instead of making new network requests.
+                artworks.forEach({ artwork in
                     let imageName = artwork.title
                     let imageLink = artwork.image.url
                     let url = URL(string: imageLink)
-                    let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                    let task = URLSession.shared.dataTask(with: url!, completionHandler: { data, _, error in
                         guard let data = data else {
                             print("location is nil: \(error)")
                             return
@@ -45,15 +44,14 @@ public class ArtworksDatabase {
                         }
                     })
                     task.resume()
-                    
-            })
+
+                })
                 completionHandler()
             } else {
                 // TODO: handle this error
             }
             print("the artworks are: \(self.arrayOfArtworks)")
             print("the images are: \(self.dictOfImages)")
-
         }
     }
 }

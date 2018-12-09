@@ -109,12 +109,12 @@ class ArtViewController: UIViewController {
     }
 
     @IBOutlet var seeSavedArtButton: UIButton?
-    @IBAction func seeSavedArt() {
-        let controller: SavedArtViewController
-        controller = storyboard?.instantiateViewController(withIdentifier: "SavedArtViewController") as! SavedArtViewController
 
-        controller.arrayOfSavedArt = usersLikedArtworks
-        navigationController?.pushViewController(controller, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        let controller = segue.destination as! SavedArtViewController
+        if segue.identifier == "ShowSaved" {
+            controller.arrayOfSavedArt = usersLikedArtworks
+        }
     }
 
     private func renderNextArt() {
