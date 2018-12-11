@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// singleton class - executes once, but set as shared so I can access what happened here (once) throughout the app.
+// singleton class - one instance, can be used throughout app via 'shared', a way to access the same database and the same instance of it, the whole time.
 
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
@@ -32,8 +32,10 @@ public class ArtworksDatabase {
 }
 
 private func loadJson(completionHandler: @escaping ([Artwork]?, Error?) -> Void) {
+    var task: URLSessionTask?
     let path = URL(string: "https://www.artroom.fun/artworks.json")
-    let task = URLSession.shared.dataTask(with: path!) { data, _, error in
+    task?.cancel()
+    task = URLSession.shared.dataTask(with: path!) { data, _, error in
         guard let data = data else {
             completionHandler(nil, error)
             return
@@ -46,5 +48,5 @@ private func loadJson(completionHandler: @escaping ([Artwork]?, Error?) -> Void)
             completionHandler(nil, error)
         }
     }
-    task.resume()
+    task!.resume()
 }
