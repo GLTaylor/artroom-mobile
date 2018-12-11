@@ -22,8 +22,12 @@ enum Interest: Int, Comparable, Codable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
+<<<<<<< HEAD
         var string = try container.decode(String.self)
         string = string.lowercased().trimmingCharacters(in: .whitespaces)
+=======
+        let string = try container.decode(String.self)
+>>>>>>> external-JSON
 
         switch string {
         case "tech": self = .tech
@@ -33,7 +37,11 @@ enum Interest: Int, Comparable, Codable {
         case "politics": self = .politics
         case "death": self = .death
         default: throw
+<<<<<<< HEAD
             DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown interest string found: \(string) "))
+=======
+            DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate interest should be \(string) "))
+>>>>>>> external-JSON
         }
     }
 }
