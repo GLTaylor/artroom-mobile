@@ -36,7 +36,7 @@ class ArtViewController: UIViewController {
         guard let url = URL(string: givenurl) else {
             return
         }
-         task = URLSession.shared.dataTask(with: url) { place, _, error in
+        task = URLSession.shared.dataTask(with: url) { place, _, _ in
             guard let place = place else {
                 print("location went wrong")
                 return
@@ -64,7 +64,7 @@ class ArtViewController: UIViewController {
         super.viewWillAppear(animated)
         renderFresh()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if let task = task {
