@@ -14,6 +14,7 @@ var usersLikedArtworks: [Artwork] = []
 class ArtViewController: UIViewController {
     var renderedForKeeping: Artwork?
     var chosenArtAttributes: ArtAttributes!
+    var task: URLSessionTask?
 
     @IBOutlet var artResults: UILabel!
     @IBOutlet var artImage: UIImageView!
@@ -26,7 +27,7 @@ class ArtViewController: UIViewController {
 
     func setCurrentArtwork(_ artwork: Artwork) {
         artResults.text = artwork.title
-        // instead of assigning an outlet like above, here I'm calling a function to do that - which assigns artImage and returns nothing
+        // instead of assigning an outlet like above, here below I'm calling a function to do that - which assigns artImage and returns nothing
         loadImageFromURL(artwork.image.url)
         renderedForKeeping = artwork
     }
@@ -35,7 +36,7 @@ class ArtViewController: UIViewController {
         guard let url = URL(string: givenurl) else {
             return
         }
-        let task = URLSession.shared.dataTask(with: url) { place, _, _ in
+         task = URLSession.shared.dataTask(with: url) { place, _, error in
             guard let place = place else {
                 print("location went wrong")
                 return
@@ -46,7 +47,7 @@ class ArtViewController: UIViewController {
             }
         }
 
-        task.resume()
+        task!.resume()
     }
 
     override func viewDidLoad() {
@@ -62,6 +63,13 @@ class ArtViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         renderFresh()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let task = task {
+            task.cancel()
+        }
     }
 
     func renderFresh() {
