@@ -13,7 +13,6 @@ class LoadDataViewController: UIViewController {
     @IBOutlet var delayMessage: UILabel?
     @IBOutlet var reloadButton: UIButton?
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadButton?.isHidden = true
@@ -38,5 +37,4 @@ class LoadDataViewController: UIViewController {
         })
         viewDidLoad()
     }
-
 }

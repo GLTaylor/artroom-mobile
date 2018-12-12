@@ -12,6 +12,7 @@ enum Mood: Int, Comparable, Codable {
     static func < (lhs: Mood, rhs: Mood) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }
+
     case joyful
     case melancholy
     case meh
@@ -33,7 +34,6 @@ enum Mood: Int, Comparable, Codable {
         case "humorous": self = .humorous
         default: throw
             DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown mood string found: \(string)"))
-
         }
     }
 }

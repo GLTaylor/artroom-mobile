@@ -37,7 +37,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         interestTitles = interests
     }
 
-
     func numberOfComponents(in _: UIPickerView) -> Int {
         return 2
     }
@@ -55,7 +54,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             return moodTitles[row]
         } else {
             return interestTitles[row]
-
         }
     }
 
@@ -66,7 +64,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 
     func assignbackgrounds() {
         let background = UIImage(named: "Artwall")
-
 
         var imageView: UIImageView!
         imageView = UIImageView(frame: view.bounds)

@@ -30,7 +30,6 @@ public class ArtworksDatabase {
             } else {
                 print(error.debugDescription)
                 completionHandler(nil, error)
-
             }
         }
     }

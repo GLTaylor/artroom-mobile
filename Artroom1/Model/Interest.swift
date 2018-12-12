@@ -25,7 +25,6 @@ enum Interest: Int, Comparable, Codable {
         var string = try container.decode(String.self)
         string = string.lowercased().trimmingCharacters(in: .whitespaces)
 
-
         switch string {
         case "tech": self = .tech
         case "nature": self = .nature
@@ -35,7 +34,6 @@ enum Interest: Int, Comparable, Codable {
         case "death": self = .death
         default: throw
             DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown interest string found: \(string) "))
-
         }
     }
 }
