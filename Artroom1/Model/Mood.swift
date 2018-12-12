@@ -8,15 +8,10 @@
 
 import Foundation
 
-<<<<<<< HEAD
 enum Mood: Int, Comparable, Codable {
     static func < (lhs: Mood, rhs: Mood) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }
-
-=======
-enum Mood: Int, Codable {
->>>>>>> external-JSON
     case joyful
     case melancholy
     case meh
@@ -26,12 +21,8 @@ enum Mood: Int, Codable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
-<<<<<<< HEAD
         var string = try container.decode(String.self)
         string = string.lowercased().trimmingCharacters(in: .whitespaces)
-=======
-        let string = try container.decode(String.self)
->>>>>>> external-JSON
 
         switch string {
         case "joyful": self = .joyful
@@ -41,11 +32,8 @@ enum Mood: Int, Codable {
         case "poetic": self = .poetic
         case "humorous": self = .humorous
         default: throw
-<<<<<<< HEAD
             DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown mood string found: \(string)"))
-=======
-            DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate mood should be \(string)"))
->>>>>>> external-JSON
+
         }
     }
 }

@@ -12,7 +12,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet var chooseSelf: UIPickerView!
     @IBOutlet var welcomeSign: UILabel!
     @IBOutlet var welcomeMessage: UILabel!
-<<<<<<< HEAD
+
     var moodTitles: [String]!
     var interestTitles: [String]!
     var chosenThings: Int!
@@ -37,16 +37,11 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         interestTitles = interests
     }
 
-=======
 
-    var chosenThings: Int!
-
->>>>>>> external-JSON
     func numberOfComponents(in _: UIPickerView) -> Int {
         return 2
     }
 
-<<<<<<< HEAD
     func pickerView(_: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
             return moodTitles.count
@@ -60,25 +55,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             return moodTitles[row]
         } else {
             return interestTitles[row]
-=======
-    func pickerView(_: UIPickerView, numberOfRowsInComponent _: Int) -> Int {
-        return 4
-    }
 
-    func pickerView(_: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch (row, component) {
-        // these need to go in order based on mood and interest structs, otherwise the data will be wonky (ie, if I set "death" to 3,1 I'd still get images for sexuality because that is the fourth interest in the struct)
-        case (0, 0): return "joyful"
-        case (1, 0): return "melancholy"
-        case (0, 1): return "tech"
-        case (1, 1): return "nature"
-        case (2, 0): return "meh"
-        case (2, 1): return "humanity"
-        case (3, 0): return "wild"
-        case (3, 1): return "sexuality"
-
-        default: return "whoops"
->>>>>>> external-JSON
         }
     }
 
@@ -88,11 +65,8 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     }
 
     func assignbackgrounds() {
-<<<<<<< HEAD
         let background = UIImage(named: "Artwall")
-=======
-        let background = UIImage(named: "polke_faded")
->>>>>>> external-JSON
+
 
         var imageView: UIImageView!
         imageView = UIImageView(frame: view.bounds)
@@ -120,7 +94,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         let art = ArtAttributes(mood: mood, interest: interest)
         return art
     }
-<<<<<<< HEAD
 
     func moodToString(_ mood: Mood) -> String {
         switch mood {
@@ -155,6 +128,4 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             return "politics"
         }
     }
-=======
->>>>>>> external-JSON
 }

@@ -14,13 +14,6 @@ class SavedArtViewController: UIViewController {
     var savedArtImage: UIImageView!
     // Displays carousel of artworks - for now, images only
     @IBOutlet var savedArt: iCarousel?
-
-<<<<<<< HEAD
-=======
-    // Displays carousel of artworks - for now, images only
-    @IBOutlet var savedArt: iCarousel?
-
->>>>>>> external-JSON
     override func viewDidLoad() {
         super.viewDidLoad()
         arrayOfSavedArt = arrayOfSavedArt!.uniqueElements
@@ -40,10 +33,7 @@ class SavedArtViewController: UIViewController {
 
 extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
     func numberOfItems(in _: iCarousel) -> Int {
-<<<<<<< HEAD
         arrayOfSavedArt = arrayOfSavedArt!.uniqueElements
-=======
->>>>>>> external-JSON
         return arrayOfSavedArt!.count
     }
 

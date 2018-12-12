@@ -10,12 +10,10 @@ import Foundation
 import UIKit
 
 class LoadDataViewController: UIViewController {
-<<<<<<< HEAD
     @IBOutlet var delayMessage: UILabel?
     @IBOutlet var reloadButton: UIButton?
 
-=======
->>>>>>> external-JSON
+
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadButton?.isHidden = true
@@ -28,7 +26,6 @@ class LoadDataViewController: UIViewController {
             }
         })
     }
-<<<<<<< HEAD
 
     @IBAction func loadAgain() {
         ArtworksDatabase.shared.load(completionHandler: { artworks, error in
@@ -41,6 +38,5 @@ class LoadDataViewController: UIViewController {
         })
         viewDidLoad()
     }
-=======
->>>>>>> external-JSON
+
 }

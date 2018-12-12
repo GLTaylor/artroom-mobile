@@ -19,12 +19,6 @@ class ArtViewController: UIViewController {
     @IBOutlet var artResults: UILabel!
     @IBOutlet var artImage: UIImageView!
 
-<<<<<<< HEAD
-    @IBOutlet var artResults: UILabel!
-    @IBOutlet var artImage: UIImageView!
-
-=======
->>>>>>> external-JSON
     private var selection: [Artwork] = []
     private var animator: UIDynamicAnimator!
     private var snapping: UISnapBehavior!
@@ -33,11 +27,7 @@ class ArtViewController: UIViewController {
 
     func setCurrentArtwork(_ artwork: Artwork) {
         artResults.text = artwork.title
-<<<<<<< HEAD
-        // instead of assigning an outlet like above, here I'm calling a function to do that - which assigns artImage and returns nothing
-=======
         // instead of assigning an outlet like above, here below I'm calling a function to do that - which assigns artImage and returns nothing
->>>>>>> external-JSON
         loadImageFromURL(artwork.image.url)
         renderedForKeeping = artwork
     }
@@ -46,12 +36,8 @@ class ArtViewController: UIViewController {
         guard let url = URL(string: givenurl) else {
             return
         }
-<<<<<<< HEAD
-        let task = URLSession.shared.dataTask(with: url) { place, _, _ in
-=======
         task?.cancel()
         task = URLSession.shared.dataTask(with: url) { place, _, _ in
->>>>>>> external-JSON
             guard let place = place else {
                 print("location went wrong")
                 return
@@ -61,12 +47,7 @@ class ArtViewController: UIViewController {
                 self.artImage.image = image
             }
         }
-
-<<<<<<< HEAD
-        task.resume()
-=======
         task!.resume()
->>>>>>> external-JSON
     }
 
     override func viewDidLoad() {
@@ -85,10 +66,8 @@ class ArtViewController: UIViewController {
     }
 
     func renderFresh() {
-<<<<<<< HEAD
         enablesSavedArtsButtonIfNeeded()
-=======
->>>>>>> external-JSON
+
         if selection.isEmpty {
             artResults.text = "No more art matches"
             artImage.image = UIImage(named: "Empty Frame")
@@ -130,20 +109,6 @@ class ArtViewController: UIViewController {
                 break
             }
         }
-<<<<<<< HEAD
-    }
-
-    @IBOutlet var seeSavedArtButton: UIButton?
-    @IBAction func seeSavedArt() {
-        let controller: SavedArtViewController
-        controller = storyboard?.instantiateViewController(withIdentifier: "SavedArtViewController") as! SavedArtViewController
-
-        controller.arrayOfSavedArt = usersLikedArtworks
-        navigationController?.pushViewController(controller, animated: true)
-    }
-
-    private func renderNextArt() {
-=======
     }
 
     @IBOutlet var seeSavedArtButton: UIButton?
@@ -157,7 +122,6 @@ class ArtViewController: UIViewController {
 
     private func renderNextArt() {
         enablesSavedArtsButtonIfNeeded()
->>>>>>> external-JSON
         if let randomArtwork = selection.randomElement(), let index = selection.firstIndex(of: randomArtwork) {
             selectedIndex = index
             setCurrentArtwork(randomArtwork)
