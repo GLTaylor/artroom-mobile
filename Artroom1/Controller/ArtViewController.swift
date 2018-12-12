@@ -125,7 +125,6 @@ class ArtViewController: UIViewController {
         if let randomArtwork = selection.randomElement(), let index = selection.firstIndex(of: randomArtwork) {
             selectedIndex = index
             setCurrentArtwork(randomArtwork)
-//            enablesSavedArtsButtonIfNeeded()
         }
     }
 

@@ -16,25 +16,19 @@ class LoadDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadButton?.isHidden = true
-        ArtworksDatabase.shared.load(completionHandler: { artworks, error in
-            if artworks != nil {
-                self.performSegue(withIdentifier: "Loaded", sender: self)
-            } else {
-                self.delayMessage?.text = "Error: You may not be connected to wifi. \(error.debugDescription)"
-                self.reloadButton?.isHidden = false
-            }
-        })
+        loadTheData()
     }
 
-    @IBAction func loadAgain() {
+    @IBAction func loadTheData() {
         ArtworksDatabase.shared.load(completionHandler: { artworks, error in
             if artworks != nil {
                 self.performSegue(withIdentifier: "Loaded", sender: self)
             } else {
-                self.delayMessage?.text = "Error: \(error?.localizedDescription ?? "another error")"
-                self.reloadButton?.isHidden = false
+                DispatchQueue.main.async {
+                    self.delayMessage?.text = "Error: \(error?.localizedDescription ?? "another error")"
+                    self.reloadButton?.isHidden = false
+                }
             }
         })
-        viewDidLoad()
     }
 }
