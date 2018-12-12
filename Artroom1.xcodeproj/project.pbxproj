@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		124A7932218A0B4A0057FECB /* ArtworksDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */; };
-		124A7934218B51250057FECB /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 124A7933218B51250057FECB /* data.json */; };
-		124A7936218CBBBB0057FECB /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A7935218CBBBB0057FECB /* ResponseData.swift */; };
 		1286EC7721775F8E00CBB491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286EC7621775F8E00CBB491 /* AppDelegate.swift */; };
 		1286EC7921775F8E00CBB491 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286EC7821775F8E00CBB491 /* HomeViewController.swift */; };
 		1286EC7C21775F8E00CBB491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1286EC7A21775F8E00CBB491 /* Main.storyboard */; };
@@ -20,13 +18,14 @@
 		1286ECD4218212B700CBB491 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD3218212B700CBB491 /* Mood.swift */; };
 		1286ECD6218212F100CBB491 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD5218212F100CBB491 /* Interest.swift */; };
 		1286ECD821821CA200CBB491 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1286ECD721821CA200CBB491 /* Artwork.swift */; };
+		129FE3AC21A472200027B11F /* SavedArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FE3AB21A472200027B11F /* SavedArtViewController.swift */; };
+		129FE3F621A72E2B0027B11F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FE3F521A72E2B0027B11F /* iCarousel.m */; };
+		129FE42221B53F9E0027B11F /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FE42121B53F9E0027B11F /* LoadDataViewController.swift */; };
 		12E8FF59219EBFA1007601B1 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8FF58219EBFA1007601B1 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksDatabase.swift; sourceTree = "<group>"; };
-		124A7933218B51250057FECB /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		124A7935218CBBBB0057FECB /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		1286EC7321775F8E00CBB491 /* Artroom1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artroom1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1286EC7621775F8E00CBB491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1286EC7821775F8E00CBB491 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +38,11 @@
 		1286ECD3218212B700CBB491 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		1286ECD5218212F100CBB491 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		1286ECD721821CA200CBB491 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		129FE3AB21A472200027B11F /* SavedArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArtViewController.swift; sourceTree = "<group>"; };
+		129FE3F321A72E290027B11F /* Artroom1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artroom1-Bridging-Header.h"; sourceTree = "<group>"; };
+		129FE3F421A72E2B0027B11F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		129FE3F521A72E2B0027B11F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		129FE42121B53F9E0027B11F /* LoadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataViewController.swift; sourceTree = "<group>"; };
 		12E8FF58219EBFA1007601B1 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,23 +76,50 @@
 		1286EC7521775F8E00CBB491 /* Artroom1 */ = {
 			isa = PBXGroup;
 			children = (
-				1286EC7621775F8E00CBB491 /* AppDelegate.swift */,
-				1286EC7821775F8E00CBB491 /* HomeViewController.swift */,
-				1286ECB12178F34D00CBB491 /* ArtViewController.swift */,
+				129FE42021AFDDBC0027B11F /* Controller */,
+				129FE41F21AFDD4B0027B11F /* View */,
+				129FE41E21AFDCFF0027B11F /* Model */,
+				124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */,
+				1286EC7D21775F9100CBB491 /* Assets.xcassets */,
+				12E8FF58219EBFA1007601B1 /* Toast.swift */,
+				129FE3F421A72E2B0027B11F /* iCarousel.h */,
+				129FE3F521A72E2B0027B11F /* iCarousel.m */,
+				1286EC8221775F9100CBB491 /* Info.plist */,
+				129FE3F321A72E290027B11F /* Artroom1-Bridging-Header.h */,
+			);
+			path = Artroom1;
+			sourceTree = "<group>";
+		};
+		129FE41E21AFDCFF0027B11F /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				1286ECD721821CA200CBB491 /* Artwork.swift */,
 				1286ECD12182122100CBB491 /* ArtAttributes.swift */,
 				1286ECD3218212B700CBB491 /* Mood.swift */,
 				1286ECD5218212F100CBB491 /* Interest.swift */,
-				124A7931218A0B4A0057FECB /* ArtworksDatabase.swift */,
-				12E8FF58219EBFA1007601B1 /* Toast.swift */,
-				1286EC7A21775F8E00CBB491 /* Main.storyboard */,
-				1286EC7D21775F9100CBB491 /* Assets.xcassets */,
-				1286EC7F21775F9100CBB491 /* LaunchScreen.storyboard */,
-				1286EC8221775F9100CBB491 /* Info.plist */,
-				124A7933218B51250057FECB /* data.json */,
-				124A7935218CBBBB0057FECB /* ResponseData.swift */,
 			);
-			path = Artroom1;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		129FE41F21AFDD4B0027B11F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1286EC7A21775F8E00CBB491 /* Main.storyboard */,
+				1286EC7F21775F9100CBB491 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		129FE42021AFDDBC0027B11F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1286EC7621775F8E00CBB491 /* AppDelegate.swift */,
+				129FE42121B53F9E0027B11F /* LoadDataViewController.swift */,
+				1286EC7821775F8E00CBB491 /* HomeViewController.swift */,
+				1286ECB12178F34D00CBB491 /* ArtViewController.swift */,
+				129FE3AB21A472200027B11F /* SavedArtViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +154,7 @@
 				TargetAttributes = {
 					1286EC7221775F8E00CBB491 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -153,7 +184,6 @@
 				1286EC8121775F9100CBB491 /* LaunchScreen.storyboard in Resources */,
 				1286EC7E21775F9100CBB491 /* Assets.xcassets in Resources */,
 				1286EC7C21775F8E00CBB491 /* Main.storyboard in Resources */,
-				124A7934218B51250057FECB /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,10 +198,12 @@
 				1286ECD22182122100CBB491 /* ArtAttributes.swift in Sources */,
 				1286ECD821821CA200CBB491 /* Artwork.swift in Sources */,
 				1286ECB22178F34D00CBB491 /* ArtViewController.swift in Sources */,
-				124A7936218CBBBB0057FECB /* ResponseData.swift in Sources */,
+				129FE42221B53F9E0027B11F /* LoadDataViewController.swift in Sources */,
+				129FE3AC21A472200027B11F /* SavedArtViewController.swift in Sources */,
 				1286ECD6218212F100CBB491 /* Interest.swift in Sources */,
 				1286EC7921775F8E00CBB491 /* HomeViewController.swift in Sources */,
 				12E8FF59219EBFA1007601B1 /* Toast.swift in Sources */,
+				129FE3F621A72E2B0027B11F /* iCarousel.m in Sources */,
 				124A7932218A0B4A0057FECB /* ArtworksDatabase.swift in Sources */,
 				1286EC7721775F8E00CBB491 /* AppDelegate.swift in Sources */,
 			);
@@ -317,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7248DZM5YC;
 				INFOPLIST_FILE = Artroom1/Info.plist;
@@ -326,6 +359,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Taylor-Lindsay-at-Babbel.Artroom1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Artroom1/Artroom1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7248DZM5YC;
 				INFOPLIST_FILE = Artroom1/Info.plist;
@@ -344,6 +380,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Taylor-Lindsay-at-Babbel.Artroom1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Artroom1/Artroom1-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

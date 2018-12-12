@@ -1,5 +1,5 @@
 //
-//  Artwork.swift
+//  ArtAttributes.swift
 //  Artroom1
 //
 //  Created by Taylor Lindsay on 10/25/18.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct Artwork: Equatable, Codable {
-    var title: String
-    var image: String
-    var attributes: ArtAttributes
+struct ArtAttributes: Equatable, Codable {
+    var mood: Mood
+    var interest: Interest
 }

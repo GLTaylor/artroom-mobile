@@ -9,22 +9,44 @@
 import Foundation
 import UIKit
 
-// this is my handy singleton class
+// singleton class - one instance, can be used throughout app via 'shared', a way to access the same database and the same instance of it, the whole time.
 
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
-    let arrayOfArtworks: [Artwork]
-    
+    private(set) var arrayOfArtworks: [Artwork] // Because I only want to mutate it here but read it from the outside
+
     private init() {
-        arrayOfArtworks = loadJson("data")
+        arrayOfArtworks = []
+    }
+
+    func load(completionHandler: @escaping () -> Void) {
+        loadJson { artworks, _ in
+            if let artworks = artworks {
+                self.arrayOfArtworks = artworks
+                completionHandler()
+            } else {
+                // TODO: handle this error
+            }
+        }
     }
 }
 
-private func loadJson(_ fileName: String) -> [Artwork] {
-    let path = Bundle.main.path(forResource: "data", ofType: "json")!
-    let data = try! Data(contentsOf: URL(fileURLWithPath: path))
-    let decoder = JSONDecoder()
-    let jsonData = try! decoder.decode(ResponseData.self, from: data)
-    return jsonData.artwork
+private func loadJson(completionHandler: @escaping ([Artwork]?, Error?) -> Void) {
+    var task: URLSessionTask?
+    let path = URL(string: "https://www.artroom.fun/artworks.json")
+    task?.cancel()
+    task = URLSession.shared.dataTask(with: path!) { data, _, error in
+        guard let data = data else {
+            completionHandler(nil, error)
+            return
+        }
+        let decoder = JSONDecoder()
+        do {
+            let artworks = try decoder.decode([Artwork].self, from: data)
+            completionHandler(artworks, nil)
+        } catch {
+            completionHandler(nil, error)
+        }
+    }
+    task!.resume()
 }
-
