@@ -95,6 +95,7 @@ class ArtViewController: UIViewController {
                 animator.addBehavior(snapping)
                 if artImage.center.x > view.center.x {
                     usersLikedArtworks.append(renderedForKeeping!)
+                    usersLikedArtworks = usersLikedArtworks.uniqueElements
                     print(usersLikedArtworks)
                     Toast.show(message: "Saved!", controller: self)
 

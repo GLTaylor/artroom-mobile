@@ -21,6 +21,7 @@
 		129FE3AC21A472200027B11F /* SavedArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FE3AB21A472200027B11F /* SavedArtViewController.swift */; };
 		129FE3F621A72E2B0027B11F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FE3F521A72E2B0027B11F /* iCarousel.m */; };
 		129FE42221B53F9E0027B11F /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FE42121B53F9E0027B11F /* LoadDataViewController.swift */; };
+		12B46C8821C259F500E4ABC9 /* UniqueElementsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B46C8721C259F500E4ABC9 /* UniqueElementsExtension.swift */; };
 		12E8FF59219EBFA1007601B1 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8FF58219EBFA1007601B1 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		129FE3F421A72E2B0027B11F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		129FE3F521A72E2B0027B11F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		129FE42121B53F9E0027B11F /* LoadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataViewController.swift; sourceTree = "<group>"; };
+		12B46C8721C259F500E4ABC9 /* UniqueElementsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueElementsExtension.swift; sourceTree = "<group>"; };
 		12E8FF58219EBFA1007601B1 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				1286ECD12182122100CBB491 /* ArtAttributes.swift */,
 				1286ECD3218212B700CBB491 /* Mood.swift */,
 				1286ECD5218212F100CBB491 /* Interest.swift */,
+				12B46C8721C259F500E4ABC9 /* UniqueElementsExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				1286ECD821821CA200CBB491 /* Artwork.swift in Sources */,
 				1286ECB22178F34D00CBB491 /* ArtViewController.swift in Sources */,
 				129FE42221B53F9E0027B11F /* LoadDataViewController.swift in Sources */,
+				12B46C8821C259F500E4ABC9 /* UniqueElementsExtension.swift in Sources */,
 				129FE3AC21A472200027B11F /* SavedArtViewController.swift in Sources */,
 				1286ECD6218212F100CBB491 /* Interest.swift in Sources */,
 				1286EC7921775F8E00CBB491 /* HomeViewController.swift in Sources */,

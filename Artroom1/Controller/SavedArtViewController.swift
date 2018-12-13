@@ -33,7 +33,6 @@ class SavedArtViewController: UIViewController {
 
 extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
     func numberOfItems(in _: iCarousel) -> Int {
-        arrayOfSavedArt = arrayOfSavedArt!.uniqueElements
         return arrayOfSavedArt!.count
     }
 
@@ -68,17 +67,5 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
             }
         }
         task.resume()
-    }
-}
-
-public extension Sequence where Element: Equatable {
-    var uniqueElements: [Element] {
-        return reduce(into: []) {
-            uniqueElements, element in
-
-            if !uniqueElements.contains(element) {
-                uniqueElements.append(element)
-            }
-        }
     }
 }
