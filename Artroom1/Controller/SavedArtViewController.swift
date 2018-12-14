@@ -16,7 +16,6 @@ class SavedArtViewController: UIViewController {
     @IBOutlet var savedArt: iCarousel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        arrayOfSavedArt = arrayOfSavedArt!.uniqueElements
 
         savedArt!.type = .invertedCylinder
         savedArt!.contentMode = .scaleAspectFit
@@ -45,7 +44,6 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
         } else {
             savedArtImage = view as? UIImageView
         }
-        arrayOfSavedArt = arrayOfSavedArt!.uniqueElements
         let nameOfImage = arrayOfSavedArt?[index].image.url
         loadImageFromURL(nameOfImage!)
 
