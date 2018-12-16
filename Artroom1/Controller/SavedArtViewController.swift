@@ -12,6 +12,7 @@ import UIKit
 class SavedArtViewController: UIViewController {
     var arrayOfSavedArt: [Artwork]?
     var savedArtImage: UIImageView!
+    var frameView: UIImageView!
     // Displays carousel of artworks - for now, images only
     @IBOutlet var savedArt: iCarousel?
     override func viewDidLoad() {
@@ -36,18 +37,22 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
     }
 
     func carousel(_: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+
         if view == nil {
+            frameView = UIImageView(frame: CGRect(x: 0, y: 0, width: 280, height: 280))
+            frameView.image = UIImage(named:"OrnateFrame")
             savedArtImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
             savedArtImage.contentMode = .scaleAspectFit
-            savedArtImage.layer.borderWidth = 5.50
+//            savedArtImage.layer.borderWidth = 5.50
+            frameView.addSubview(savedArtImage)
+
 
         } else {
-            savedArtImage = view as? UIImageView
+            frameView = view as? UIImageView
         }
         let nameOfImage = arrayOfSavedArt?[index].image.url
         loadImageFromURL(nameOfImage!)
-
-        return savedArtImage
+        return frameView
     }
 
     func loadImageFromURL(_ givenurl: String) {
