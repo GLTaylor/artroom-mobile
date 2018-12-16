@@ -12,6 +12,8 @@ import UIKit
 class SavedArtViewController: UIViewController {
     var arrayOfSavedArt: [Artwork]?
     var savedArtImage: UIImageView!
+    // new var to try to get frame included
+    // I now have a customized class, but I can't plug it in here (not sure how it fits with carousel)
     var frameView: UIImageView!
     // Displays carousel of artworks - for now, images only
     @IBOutlet var savedArt: iCarousel?
@@ -43,7 +45,9 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
             frameView.image = UIImage(named:"OrnateFrame")
             savedArtImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
             savedArtImage.contentMode = .scaleAspectFit
-//            savedArtImage.layer.borderWidth = 5.50
+            //not sure if this helps at all
+            frameView.frame = savedArtImage.bounds;
+
             frameView.addSubview(savedArtImage)
 
 
