@@ -65,6 +65,11 @@ class ArtViewController: UIViewController {
         super.viewWillAppear(animated)
         renderFresh()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Toast.show(message: "Swipe to save", controller: self)
+    }
 
     func renderFresh() {
         enablesSavedArtsButtonIfNeeded()
