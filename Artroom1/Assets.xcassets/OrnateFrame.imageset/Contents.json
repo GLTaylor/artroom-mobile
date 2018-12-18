@@ -1,6 +1,20 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 198,
+          "top" : 197,
+          "right" : 208,
+          "left" : 207
+        }
+      },
       "idiom" : "universal",
       "filename" : "OrnateFrame.jpg",
       "scale" : "1x"

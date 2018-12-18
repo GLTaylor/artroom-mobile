@@ -12,6 +12,7 @@ struct Artwork: Equatable, Decodable {
     let title: String
     let image: Image
     let attributes: ArtAttributes
+    let artist: Artist
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -20,6 +21,7 @@ struct Artwork: Equatable, Decodable {
         attributes = ArtAttributes(mood: mood, interest: interest)
         title = try container.decode(String.self, forKey: .title)
         image = try container.decode(Image.self, forKey: .image)
+        artist = try container.decode(Artist.self, forKey: .artist)
     }
 
     enum CodingKeys: String, CodingKey {
@@ -27,10 +29,15 @@ struct Artwork: Equatable, Decodable {
         case image
         case mood
         case interest
+        case artist
     }
 
-    // to handle the fact that my new JSON will have Image { url: String }
+    // to handle the fact that my new JSON will have Image { url: String } and Artist { name: String } 
     struct Image: Equatable, Codable {
         let url: String
+    }
+    
+    struct Artist: Equatable, Codable {
+        let name: String
     }
 }

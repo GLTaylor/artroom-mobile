@@ -11,10 +11,7 @@ import UIKit
 
 class SavedArtViewController: UIViewController {
     var arrayOfSavedArt: [Artwork]?
-    var savedArtImage: UIImageView!
-    // new var to try to get frame included
-    // I now have a customized class, but I can't plug it in here (not sure how it fits with carousel)
-    var frameView: UIImageView!
+    var savedArtImage: UIImage!
     // Displays carousel of artworks - for now, images only
     @IBOutlet var savedArt: iCarousel?
     override func viewDidLoad() {
@@ -37,29 +34,21 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
     func numberOfItems(in _: iCarousel) -> Int {
         return arrayOfSavedArt!.count
     }
+    
+    
 
     func carousel(_: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
 
-        if view == nil {
-            frameView = UIImageView(frame: CGRect(x: 0, y: 0, width: 280, height: 280))
-            frameView.image = UIImage(named:"OrnateFrame")
-            savedArtImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
-            savedArtImage.contentMode = .scaleAspectFit
-            //not sure if this helps at all
-            frameView.frame = savedArtImage.bounds;
-
-            frameView.addSubview(savedArtImage)
-
-
-        } else {
-            frameView = view as? UIImageView
-        }
+        let frameView = FramedArtView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        
         let nameOfImage = arrayOfSavedArt?[index].image.url
-        loadImageFromURL(nameOfImage!)
+        loadImageFromURL(nameOfImage!, framedView: frameView)
+
+        //This neews to be the framedView from the loadImageFromURL func
         return frameView
     }
 
-    func loadImageFromURL(_ givenurl: String) {
+    func loadImageFromURL(_ givenurl: String, framedView: FramedArtView) {
         guard let url = URL(string: givenurl) else {
             return
         }
@@ -70,7 +59,7 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
             }
             let image = UIImage(data: place)
             DispatchQueue.main.async {
-                self.savedArtImage.image = image
+                framedView.setImage(image!)
             }
         }
         task.resume()

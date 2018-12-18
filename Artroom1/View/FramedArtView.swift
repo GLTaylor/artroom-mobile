@@ -10,46 +10,75 @@ import Foundation
 import UIKit
 
 class FramedArtView: UIView {
-    // for later - may not need
-    var shouldSetupConstraints = true
+   
+    // A view for the frame and a view for the artwork
+    private var picframeView: UIImageView!
+    private var savedArtImageView: UIImageView!
+    private var widthConstraint: NSLayoutConstraint!
+    private var heightConstraint: NSLayoutConstraint!
     
-    var picframeView: UIImageView!
-    var savedArtImageView: UIImageView!
-    
-    let screenSize = UIScreen.main.bounds
-    
+ 
+        
     override init(frame: CGRect){
+        picframeView = UIImageView()
+        picframeView.translatesAutoresizingMaskIntoConstraints = false
+        picframeView.image = UIImage(named:"NormalFrame")
+        savedArtImageView = UIImageView()
+        savedArtImageView.translatesAutoresizingMaskIntoConstraints = false
+        savedArtImageView.contentMode = .scaleAspectFit
         super.init(frame: frame)
-        
-        picframeView = UIImageView(frame: CGRect.zero)
-        picframeView = UIImageView(frame: CGRect(x: 0, y: 0, width: 280, height: 280))
-        picframeView.image = UIImage(named:"OrnateFrame")
-        // how do I make this flexible to whatever the subview is?
-        
-        self.addSubview(picframeView)
-        
-        savedArtImageView = UIImageView(frame: CGRect.zero)
-        savedArtImageView.layer.borderColor = UIColor.black.cgColor
-        savedArtImageView.layer.borderWidth = 1.0
-        // in my VC I will set the actual image, I hope
-        
-
-        self.addSubview(savedArtImageView)
+        addSubview(picframeView)
+        addSubview(savedArtImageView)
+        savedArtImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        savedArtImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        widthConstraint = savedArtImageView.widthAnchor.constraint(equalToConstant: 0)
+        widthConstraint.isActive = true
+        heightConstraint = savedArtImageView.heightAnchor.constraint(equalToConstant: 0)
+        heightConstraint.isActive = true
         
     }
+    
+    func setImage(_ image: UIImage) {
+        savedArtImageView.image = image
+//        var newSize: CGSize = CGSize()
+
+//          need to get size minus 60 for frame accomodation
+        let accomodatingSizeForImage = image.accomodatingSize(maxSize: (savedArtImageView.bounds.size))
+        let newSizeWidth = accomodatingSizeForImage.width - 60
+        let newSizeHeight = accomodatingSizeForImage.height - 50
+//        newSize.width = newSizeWidth
+//        newSize.height = newSizeHeight
+        savedArtImageView.image!.accessibilityFrame.size.width = newSizeWidth
+        savedArtImageView.image!.accessibilityFrame.size.height = newSizeHeight
+       
+        }
+    
+    
+        
+    
+
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    // for later - may not need
-    override func updateConstraints() {
-        if(shouldSetupConstraints) {
-            // AutoLayout constraints
-            shouldSetupConstraints = false
-        }
-        super.updateConstraints()
-    }
+   
 }
+
+extension UIImage {
+    func accomodatingSize(maxSize: CGSize) -> CGSize {
+        guard size.width > 0 && size.height > 0 else { return size }
+        
+        let scale: CGFloat
+        
+        if size.width > size.height {
+            scale = maxSize.width / size.width
+        } else {
+            scale = maxSize.height / size.height
+        }
+        return CGSize(width: size.width * scale , height: size.height * scale)
+    }
+    
+}
+
 
 

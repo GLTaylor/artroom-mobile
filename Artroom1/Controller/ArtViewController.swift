@@ -17,6 +17,7 @@ class ArtViewController: UIViewController {
     var task: URLSessionTask?
 
     @IBOutlet var artResults: UILabel!
+    @IBOutlet var artArtist: UILabel!
     @IBOutlet var artImage: UIImageView!
 
     private var selection: [Artwork] = []
@@ -26,7 +27,7 @@ class ArtViewController: UIViewController {
     var selectedIndex: Int!
 
     func setCurrentArtwork(_ artwork: Artwork) {
-        artResults.text = artwork.title
+        artResults.text = "\(artwork.title) - \(artwork.artist.name)"
         // instead of assigning an outlet like above, here below I'm calling a function to do that - which assigns artImage and returns nothing
         loadImageFromURL(artwork.image.url)
         renderedForKeeping = artwork
