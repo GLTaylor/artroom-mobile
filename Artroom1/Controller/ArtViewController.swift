@@ -17,7 +17,6 @@ class ArtViewController: UIViewController {
     var task: URLSessionTask?
 
     @IBOutlet var artResults: UILabel!
-    @IBOutlet var artArtist: UILabel!
     @IBOutlet var artImage: UIImageView!
 
     private var selection: [Artwork] = []

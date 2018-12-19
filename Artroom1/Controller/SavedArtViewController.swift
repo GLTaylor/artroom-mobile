@@ -44,8 +44,14 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
         let nameOfImage = arrayOfSavedArt?[index].image.url
         loadImageFromURL(nameOfImage!, framedView: frameView)
 
-        //This neews to be the framedView from the loadImageFromURL func
         return frameView
+    }
+        
+    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
+        switch (option) {
+        case .spacing: return 1.2
+        default: return value
+        }
     }
 
     func loadImageFromURL(_ givenurl: String, framedView: FramedArtView) {
