@@ -26,6 +26,7 @@ class ArtViewController: UIViewController {
     var selectedIndex: Int!
 
     func setCurrentArtwork(_ artwork: Artwork) {
+        artResults.numberOfLines = 0
         artResults.text = "\(artwork.title) - \(artwork.artist.name)"
         // instead of assigning an outlet like above, here below I'm calling a function to do that - which assigns artImage and returns nothing
         loadImageFromURL(artwork.image.url)
@@ -52,6 +53,8 @@ class ArtViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // hides the title
+        navigationItem.titleView = UIView()
         animator = UIDynamicAnimator(referenceView: view)
         snapping = UISnapBehavior(item: artImage, snapTo: CGPoint(x: view.center.x, y: (view.center.y - 60)))
         animator.addBehavior(snapping)
@@ -64,7 +67,7 @@ class ArtViewController: UIViewController {
         super.viewWillAppear(animated)
         renderFresh()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Toast.show(message: "Swipe to save", controller: self)

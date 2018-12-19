@@ -183,11 +183,11 @@
                                     <outletCollection property="gestureRecognizers" destination="JKy-w9-tUl" appends="YES" id="Rj3-O2-Spq"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art Results" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT0-Zk-IbP">
-                                <rect key="frame" x="57" y="516" width="300" height="45"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art Results" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT0-Zk-IbP">
+                                <rect key="frame" x="34" y="499" width="346" height="120"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="JgK-XM-D9C"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="JgK-XM-D9C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -209,15 +209,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="top" secondItem="W0U-Pr-MFC" secondAttribute="bottom" constant="30" id="1jQ-nE-I0t"/>
-                            <constraint firstItem="YT0-Zk-IbP" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="57" id="2ob-SL-t2b"/>
+                            <constraint firstItem="YT0-Zk-IbP" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="34" id="2ob-SL-t2b"/>
                             <constraint firstItem="W0U-Pr-MFC" firstAttribute="top" secondItem="KYD-NC-ZPe" secondAttribute="top" constant="22" id="6Ts-2S-Can"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="centerX" secondItem="qhn-9a-pz1" secondAttribute="centerX" id="72H-Pe-Xdy"/>
                             <constraint firstItem="KYD-NC-ZPe" firstAttribute="trailing" secondItem="W0U-Pr-MFC" secondAttribute="trailing" constant="17" id="LdA-SY-zGK"/>
-                            <constraint firstItem="YT0-Zk-IbP" firstAttribute="top" secondItem="9Rc-3I-unb" secondAttribute="bottom" constant="47" id="Uel-0V-F58"/>
+                            <constraint firstItem="YT0-Zk-IbP" firstAttribute="top" secondItem="9Rc-3I-unb" secondAttribute="bottom" constant="30" id="Uel-0V-F58"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="centerX" secondItem="YT0-Zk-IbP" secondAttribute="centerX" id="gyH-SM-3wV"/>
+                            <constraint firstItem="KYD-NC-ZPe" firstAttribute="bottom" secondItem="9Rc-3I-unb" secondAttribute="bottom" constant="267" id="iVZ-MH-RNC"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="top" secondItem="KYD-NC-ZPe" secondAttribute="top" constant="82" id="obd-3D-HXw"/>
                             <constraint firstItem="W0U-Pr-MFC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="317" id="qET-4u-lty"/>
-                            <constraint firstItem="KYD-NC-ZPe" firstAttribute="bottom" secondItem="YT0-Zk-IbP" secondAttribute="bottom" constant="175" id="wzb-dS-UO3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KYD-NC-ZPe"/>
                     </view>

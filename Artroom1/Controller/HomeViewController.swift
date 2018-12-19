@@ -19,7 +19,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
 
         let artworks = ArtworksDatabase.shared.arrayOfArtworks
         let moods = Set(artworks.map { (artwork) -> Mood in
@@ -127,9 +127,9 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             return "politics"
         }
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 }

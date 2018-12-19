@@ -16,7 +16,8 @@ class SavedArtViewController: UIViewController {
     @IBOutlet var savedArt: iCarousel?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // hides the title
+        navigationItem.titleView = UIView()
         savedArt!.type = .invertedCylinder
         savedArt!.contentMode = .scaleAspectFit
 
@@ -34,21 +35,18 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
     func numberOfItems(in _: iCarousel) -> Int {
         return arrayOfSavedArt!.count
     }
-    
-    
 
-    func carousel(_: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-
+    func carousel(_: iCarousel, viewForItemAt index: Int, reusing _: UIView?) -> UIView {
         let frameView = FramedArtView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-        
+
         let nameOfImage = arrayOfSavedArt?[index].image.url
         loadImageFromURL(nameOfImage!, framedView: frameView)
 
         return frameView
     }
-        
-    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-        switch (option) {
+
+    func carousel(_: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
+        switch option {
         case .spacing: return 1.2
         default: return value
         }

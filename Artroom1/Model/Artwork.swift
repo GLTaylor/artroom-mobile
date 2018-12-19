@@ -32,11 +32,11 @@ struct Artwork: Equatable, Decodable {
         case artist
     }
 
-    // to handle the fact that my new JSON will have Image { url: String } and Artist { name: String } 
+    // to handle the fact that my new JSON will have Image { url: String } and Artist { name: String }
     struct Image: Equatable, Codable {
         let url: String
     }
-    
+
     struct Artist: Equatable, Codable {
         let name: String
     }
