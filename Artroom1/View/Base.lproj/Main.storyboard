@@ -174,11 +174,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Rc-3I-unb">
-                                <rect key="frame" x="34" y="102" width="346" height="367"/>
+                                <rect key="frame" x="18" y="102" width="378" height="367"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="346" id="Af4-s1-cUe"/>
-                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="JKy-w9-tUl" appends="YES" id="Rj3-O2-Spq"/>
                                 </connections>
@@ -212,9 +209,10 @@
                             <constraint firstItem="YT0-Zk-IbP" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="34" id="2ob-SL-t2b"/>
                             <constraint firstItem="W0U-Pr-MFC" firstAttribute="top" secondItem="KYD-NC-ZPe" secondAttribute="top" constant="22" id="6Ts-2S-Can"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="centerX" secondItem="qhn-9a-pz1" secondAttribute="centerX" id="72H-Pe-Xdy"/>
+                            <constraint firstItem="9Rc-3I-unb" firstAttribute="leading" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="18" id="HNe-hD-syH"/>
+                            <constraint firstItem="YT0-Zk-IbP" firstAttribute="centerX" secondItem="KYD-NC-ZPe" secondAttribute="centerX" id="Isd-pR-9s1"/>
                             <constraint firstItem="KYD-NC-ZPe" firstAttribute="trailing" secondItem="W0U-Pr-MFC" secondAttribute="trailing" constant="17" id="LdA-SY-zGK"/>
                             <constraint firstItem="YT0-Zk-IbP" firstAttribute="top" secondItem="9Rc-3I-unb" secondAttribute="bottom" constant="30" id="Uel-0V-F58"/>
-                            <constraint firstItem="9Rc-3I-unb" firstAttribute="centerX" secondItem="YT0-Zk-IbP" secondAttribute="centerX" id="gyH-SM-3wV"/>
                             <constraint firstItem="KYD-NC-ZPe" firstAttribute="bottom" secondItem="9Rc-3I-unb" secondAttribute="bottom" constant="267" id="iVZ-MH-RNC"/>
                             <constraint firstItem="9Rc-3I-unb" firstAttribute="top" secondItem="KYD-NC-ZPe" secondAttribute="top" constant="82" id="obd-3D-HXw"/>
                             <constraint firstItem="W0U-Pr-MFC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KYD-NC-ZPe" secondAttribute="leading" constant="317" id="qET-4u-lty"/>
