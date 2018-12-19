@@ -8,7 +8,11 @@
 
 import Foundation
 
-enum Interest: Int, Codable {
+enum Interest: Int, Comparable, Codable {
+    static func < (lhs: Interest, rhs: Interest) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+
     case tech
     case nature
     case humanity
@@ -18,17 +22,18 @@ enum Interest: Int, Codable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
-        let string = try container.decode(String.self)
+        var string = try container.decode(String.self)
+        string = string.lowercased().trimmingCharacters(in: .whitespaces)
 
         switch string {
-        case "Tech ", "Tech": self = .tech
-        case "Nature", "Nature ": self = .nature
-        case "Humanity", "Humanity ": self = .humanity
-        case "Sexuality", "eroticism", "Sexuality ": self = .sexuality
-        case "Politics", "politics", "Politics ": self = .politics
-        case "Death", "death", "Death ": self = .death
+        case "tech": self = .tech
+        case "nature": self = .nature
+        case "humanity": self = .humanity
+        case "sexuality", "eroticism": self = .sexuality
+        case "politics": self = .politics
+        case "death": self = .death
         default: throw
-            DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown string found where a legitimate interest should be \(string) "))
+            DecodingError.dataCorrupted(DecodingError.Context(codingPath: container.codingPath, debugDescription: "Unknown interest string found: \(string) "))
         }
     }
 }

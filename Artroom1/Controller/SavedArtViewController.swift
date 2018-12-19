@@ -12,12 +12,11 @@ import UIKit
 class SavedArtViewController: UIViewController {
     var arrayOfSavedArt: [Artwork]?
     var savedArtImage: UIImageView!
-
     // Displays carousel of artworks - for now, images only
     @IBOutlet var savedArt: iCarousel?
-
     override func viewDidLoad() {
         super.viewDidLoad()
+
         savedArt!.type = .invertedCylinder
         savedArt!.contentMode = .scaleAspectFit
 
@@ -40,11 +39,14 @@ extension SavedArtViewController: iCarouselDelegate, iCarouselDataSource {
         if view == nil {
             savedArtImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
             savedArtImage.contentMode = .scaleAspectFit
+            savedArtImage.layer.borderWidth = 5.50
+
         } else {
             savedArtImage = view as? UIImageView
         }
         let nameOfImage = arrayOfSavedArt?[index].image.url
         loadImageFromURL(nameOfImage!)
+
         return savedArtImage
     }
 

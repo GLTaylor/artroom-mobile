@@ -47,7 +47,6 @@ class ArtViewController: UIViewController {
                 self.artImage.image = image
             }
         }
-
         task!.resume()
     }
 
@@ -67,6 +66,8 @@ class ArtViewController: UIViewController {
     }
 
     func renderFresh() {
+        enablesSavedArtsButtonIfNeeded()
+
         if selection.isEmpty {
             artResults.text = "No more art matches"
             artImage.image = UIImage(named: "Empty Frame")
@@ -93,7 +94,9 @@ class ArtViewController: UIViewController {
             case .ended, .cancelled, .failed:
                 animator.addBehavior(snapping)
                 if artImage.center.x > view.center.x {
-                    usersLikedArtworks.append(renderedForKeeping!)
+                    if !usersLikedArtworks.contains(renderedForKeeping!) {
+                        usersLikedArtworks.append(renderedForKeeping!)
+                    }
                     print(usersLikedArtworks)
                     Toast.show(message: "Saved!", controller: self)
 

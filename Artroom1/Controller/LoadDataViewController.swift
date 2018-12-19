@@ -10,10 +10,25 @@ import Foundation
 import UIKit
 
 class LoadDataViewController: UIViewController {
+    @IBOutlet var delayMessage: UILabel?
+    @IBOutlet var reloadButton: UIButton?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        ArtworksDatabase.shared.load(completionHandler: {
-            self.performSegue(withIdentifier: "Loaded", sender: self)
+        reloadButton?.isHidden = true
+        loadTheData()
+    }
+
+    @IBAction func loadTheData() {
+        ArtworksDatabase.shared.load(completionHandler: { artworks, error in
+            if artworks != nil {
+                self.performSegue(withIdentifier: "Loaded", sender: self)
+            } else {
+                DispatchQueue.main.async {
+                    self.delayMessage?.text = "Error: \(error?.localizedDescription ?? "another error")"
+                    self.reloadButton?.isHidden = false
+                }
+            }
         })
     }
 }

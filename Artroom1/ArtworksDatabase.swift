@@ -13,19 +13,23 @@ import UIKit
 
 public class ArtworksDatabase {
     static let shared = ArtworksDatabase()
+
     private(set) var arrayOfArtworks: [Artwork] // Because I only want to mutate it here but read it from the outside
 
     private init() {
         arrayOfArtworks = []
     }
 
-    func load(completionHandler: @escaping () -> Void) {
-        loadJson { artworks, _ in
+    // added error and [Artwork]
+    func load(completionHandler: @escaping ([Artwork]?, Error?) -> Void) {
+        loadJson { artworks, error in
+
             if let artworks = artworks {
                 self.arrayOfArtworks = artworks
-                completionHandler()
+                completionHandler(artworks, nil)
             } else {
-                // TODO: handle this error
+                print(error.debugDescription)
+                completionHandler(nil, error)
             }
         }
     }
