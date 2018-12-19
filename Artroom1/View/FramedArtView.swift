@@ -39,18 +39,22 @@ class FramedArtView: UIView {
     }
     
     func setImage(_ image: UIImage) {
+        
+        var frameWidthConstraint: NSLayoutConstraint!
+        var frameHeightConstraint: NSLayoutConstraint!
+//        frameWidthConstraint = picframeView.widthAnchor.constraint(equalToConstant: 0)
+        frameWidthConstraint.isActive = true
+        
         savedArtImageView.image = image
-//        var newSize: CGSize = CGSize()
-
-//          need to get size minus 60 for frame accomodation
-        let accomodatingSizeForImage = image.accomodatingSize(maxSize: (savedArtImageView.bounds.size))
-        let newSizeWidth = accomodatingSizeForImage.width - 60
-        let newSizeHeight = accomodatingSizeForImage.height - 50
-//        newSize.width = newSizeWidth
-//        newSize.height = newSizeHeight
-        savedArtImageView.image!.accessibilityFrame.size.width = newSizeWidth
-        savedArtImageView.image!.accessibilityFrame.size.height = newSizeHeight
-       
+        let newSize: CGSize = CGSize(width: (bounds.size.width - 60), height: bounds.size.height - 50)
+        let accomodatingSizeForImage = image.accomodatingSize(maxSize: newSize)
+        widthConstraint.constant = accomodatingSizeForImage.width
+        heightConstraint.constant = accomodatingSizeForImage.height
+        // Four constraints should set the frame. These two center it
+        picframeView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        picframeView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        // This doesn't quite work but it should be that the frame is just slightly bigger than the image so the below is almost right I think
+        frameWidthConstraint = picframeView.widthAnchor.constraint(equalToConstant: (newSize.width + 60))
         }
     
     
