@@ -26,7 +26,8 @@ class ArtViewController: UIViewController {
     var selectedIndex: Int!
 
     func setCurrentArtwork(_ artwork: Artwork) {
-        artResults.text = artwork.title
+        artResults.numberOfLines = 0
+        artResults.text = "\(artwork.title) - \(artwork.artist.name)"
         // instead of assigning an outlet like above, here below I'm calling a function to do that - which assigns artImage and returns nothing
         loadImageFromURL(artwork.image.url)
         renderedForKeeping = artwork
@@ -52,9 +53,9 @@ class ArtViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // hides the title
+        navigationItem.titleView = UIView()
         animator = UIDynamicAnimator(referenceView: view)
-        snapping = UISnapBehavior(item: artImage, snapTo: CGPoint(x: view.center.x, y: (view.center.y - 60)))
-        animator.addBehavior(snapping)
         selection = ArtworksDatabase.shared.arrayOfArtworks.filter { (artwork: Artwork) -> Bool in
             artwork.attributes == chosenArtAttributes
         }
@@ -63,6 +64,13 @@ class ArtViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         renderFresh()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Toast.show(message: "Swipe to save", controller: self)
+        snapping = UISnapBehavior(item: artImage, snapTo: artImage.center)
+        animator.addBehavior(snapping)
     }
 
     func renderFresh() {
@@ -93,7 +101,8 @@ class ArtViewController: UIViewController {
                 animator.removeBehavior(snapping)
             case .ended, .cancelled, .failed:
                 animator.addBehavior(snapping)
-                if artImage.center.x > view.center.x {
+                let diffBetweenCenters = artImage.center.x - view.center.x
+                if diffBetweenCenters > 40 {
                     if !usersLikedArtworks.contains(renderedForKeeping!) {
                         usersLikedArtworks.append(renderedForKeeping!)
                     }
@@ -102,7 +111,8 @@ class ArtViewController: UIViewController {
 
                     selection.remove(at: selectedIndex)
                     renderFresh()
-                } else {
+
+                } else if diffBetweenCenters <= -40 {
                     selection.remove(at: selectedIndex)
                     renderFresh()
                     NSLog("gesture went left")
